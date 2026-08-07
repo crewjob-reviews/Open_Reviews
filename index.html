@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>승무원 면접 후기 모음</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Jua&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky: #eaf4ff;
+  --sky-deep: #cfe8ff;
+  --pink: #ffe3ec;
+  --pink-deep: #ffc4d6;
+  --lav: #f1ebff;
+  --ink: #4a4458;
+  --heart: #ff8fab;
+  --card-bg: #ffffff;
+  --lock-bg: #f8f6ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Gaegu', sans-serif;
+  background: linear-gradient(180deg, var(--sky) 0%, var(--lav) 100%);
+  color: var(--ink);
+  padding: 24px 14px 60px;
+}
+
+.wrap { max-width: 720px; margin: 0 auto; }
+
+h1 {
+  font-family: 'Jua', sans-serif;
+  text-align: center;
+  font-size: 2.1rem;
+  color: #6b5b95;
+  margin-bottom: 4px;
+}
+
+.sub {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #8b7fa8;
+  margin-bottom: 20px;
+}
+
+.intro {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 14px rgba(140,120,180,0.12);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.unlock-banner {
+  background: linear-gradient(135deg, #fff5f8 0%, #f3edff 100%);
+  border: 2px dashed var(--heart);
+  border-radius: 20px;
+  padding: 20px 22px;
+  margin-bottom: 28px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.unlock-banner strong {
+  color: #6b5b95;
+  font-family: 'Jua', sans-serif;
+  font-size: 1.2rem;
+}
+
+.unlock-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+  text-align: left;
+}
+
+.unlock-method {
+  background: white;
+  border-radius: 14px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(140,120,180,0.08);
+}
+
+.unlock-method .icon { font-size: 1.5rem; flex-shrink: 0; }
+.unlock-method .desc .label { font-family: 'Jua', sans-serif; color: #6b5b95; font-size: 1.05rem; }
+.unlock-method .desc .detail { color: #9b8fb5; font-size: 0.95rem; }
+
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.stat-chip {
+  background: white;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.95rem;
+  color: #6b5b95;
+  box-shadow: 0 2px 8px rgba(140,120,180,0.1);
+  font-family: 'Jua', sans-serif;
+}
+
+.section-label {
+  font-family: 'Jua', sans-serif;
+  font-size: 1.3rem;
+  color: #6b5b95;
+  text-align: center;
+  margin: 36px 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-label::before,
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9b8e8, transparent);
+}
+
+.airline { margin-bottom: 34px; }
+
+.airline-title {
+  font-family: 'Jua', sans-serif;
+  font-size: 1.5rem;
+  color: #5b6ea8;
+  background: var(--sky-deep);
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(140,120,180,0.1);
+  line-height: 1.8;
+  font-size: 1.12rem;
+  break-inside: avoid;
+}
+
+.name { font-family: 'Jua', sans-serif; color: #f27ba0; font-size: 1.2rem; }
+.meta { color: #9b8fb5; font-size: 1rem; }
+.result { font-weight: 700; }
+.result.pass { color: #4caf7d; }
+.result.wait { color: #c99a3d; }
+.result.fail { color: #b58ccf; }
+
+.timeline {
+  margin-top: 10px;
+  background: var(--lav);
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  color: #6b5b95;
+}
+
+.timeline b { color: #8a5fbd; }
+.story { margin-top: 10px; }
+
+.tip {
+  margin-top: 12px;
+  background: var(--pink);
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-size: 1.08rem;
+}
+
+.tip .heart-label { color: var(--heart); font-weight: 700; margin-right: 4px; }
+
+.card.locked {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  min-height: 120px;
+}
+
+.card.locked .locked-content {
+  filter: blur(6px);
+  user-select: none;
+  pointer-events: none;
+}
+
+.card.locked .lock-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(248,246,255,0.95) 60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 18px;
+}
+
+.lock-icon { font-size: 2rem; opacity: 0.6; }
+
+.lock-text {
+  font-family: 'Jua', sans-serif;
+  color: #6b5b95;
+  font-size: 1.05rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.cta-section { text-align: center; margin-top: 40px; margin-bottom: 20px; }
+
+.cta-group { margin-bottom: 8px; }
+
+.cta-btn {
+  display: inline-block;
+  color: white;
+  font-family: 'Jua', sans-serif;
+  font-size: 1.25rem;
+  padding: 16px 36px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+}
+
+.cta-btn.primary {
+  background: linear-gradient(135deg, #ff8fab 0%, #c9a0dc 100%);
+  box-shadow: 0 6px 20px rgba(255,143,171,0.35);
+}
+
+.cta-btn.primary:hover {
+  box-shadow: 0 8px 24px rgba(255,143,171,0.45);
+}
+
+.cta-btn.secondary {
+  background: linear-gradient(135deg, #a0c4ff 0%, #bdb2ff 100%);
+  box-shadow: 0 6px 20px rgba(160,196,255,0.35);
+  font-size: 1.15rem;
+  padding: 14px 32px;
+}
+
+.cta-btn.secondary:hover {
+  box-shadow: 0 8px 24px rgba(160,196,255,0.45);
+}
+
+.cta-sub { margin-top: 10px; color: #9b8fb5; font-size: 0.95rem; }
+.cta-sub b { color: #6b5b95; }
+
+.cta-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 18px 0;
+  color: #c9b8e8;
+  font-family: 'Jua', sans-serif;
+  font-size: 1rem;
+}
+
+.cta-divider::before,
+.cta-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9b8e8, transparent);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.15rem;
+  color: #8b7fa8;
+  line-height: 1.9;
+}
+
+.watermark {
+  position: fixed;
+  bottom: 14px;
+  right: 20px;
+  font-family: 'Gaegu', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(139,127,168,0.45);
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.7rem; }
+  .unlock-methods { gap: 6px; }
+  .stats-bar { gap: 8px; }
+  .stat-chip { font-size: 0.85rem; padding: 5px 12px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="watermark">항공사 채용알림방[객실승무원 국내/해외] · 2026.08</div>
+
+  <h1>✈️ 승무원 면접 후기 모음</h1>
+  <div class="sub">2026.08 · 함께 준비하는 우리들의 이야기 🩷</div>
+
+  <div class="stats-bar">
+    <span class="stat-chip">✈️ 항공사 11개</span>
+    <span class="stat-chip">📝 후기 17건</span>
+    <span class="stat-chip">🎉 합격 후기 5건</span>
+  </div>
+
+  <div class="intro">
+    후기를 남겨주신 모든 분들, 정말 고생 많으셨어요!<br>
+    합격도 불합격도, 아직 기다리시는 분들도 — 여러분의 이야기가 다음 사람에게 큰 힘이 됩니다 🌷
+  </div>
+
+  <div class="unlock-banner">
+    <strong>🔓 나머지 12개 후기도 보고 싶다면?</strong><br><br>
+    <div class="unlock-methods">
+      <div class="unlock-method">
+        <span class="icon">📝</span>
+        <div class="desc">
+          <div class="label">면접 다녀오셨다면 → 후기 남기기</div>
+        </div>
+      </div>
+      <div class="unlock-method">
+        <span class="icon">👋</span>
+        <div class="desc">
+          <div class="label">아직 면접 전이라면 → 준비 현황 공유하기</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 14px; color: #9b8fb5; font-size: 0.95rem;">둘 중 하나만 작성하면 전체 후기가 열려요!</div>
+  </div>
+
+  <!-- ============ 공개 후기 5건 ============ -->
+  <div class="section-label">공개 후기 5건</div>
+
+  <!-- 공개 1: 대한항공 - 리리 -->
+  <div class="airline">
+    <div class="airline-title">🇰🇷 대한항공</div>
+    <div class="card">
+      <span class="name">리리</span> · <span class="meta">2025년 하반기 · <span class="result fail">불합격</span></span>
+      <div class="timeline"><b>타임라인</b> 지원(10/6) → 서류발표(10/23) → 영상면접(10/26) → 영상 발표(11/14) → 2차면접(11/20)</div>
+      <div class="story">서류 발표까지 3주 가까이 걸렸고, 영상면접 결과를 기다리는 데도 거의 3주가 더 걸렸어요. 지원부터 2차 면접까지 총 한 달 반 정도 걸린 긴 여정이었대요. 2차(임원)면접에서는 승무원 지원동기와 특기를 물으셨어요.</div>
+      <div class="tip"><span class="heart-label">🩷 팁</span> 답변을 길게 하면 안 좋아하시는 것 같았어요. 짧고 명확하게!</div>
+    </div>
+  </div>
+
+  <!-- 공개 2: 에미레이트 - 비행중 -->
+  <div class="airline">
+    <div class="airline-title">🌏 에미레이트항공</div>
+    <div class="card">
+      <span class="name">비행중</span> · <span class="meta">2026년 4월, 유럽 오픈데이 · <span class="result fail">불합격</span></span>
+      <div class="timeline"><b>타임라인</b> 유럽 오픈데이 지원(4월) → 같은 날 파이널 진출(사진촬영·파이널·영어테스트까지 한 번에 진행) → 온라인 파이널 → 파이널 탈락 통보(6월)</div>
+      <div class="story">오픈데이 당일에 사진 촬영부터 파이널, 영어테스트까지 한 번에 몰아서 진행됐고, 이후 온라인 파이널까지 이어지는 긴 과정이었어요. 최고의 서비스 경험, 갈등 상황 대처, 학교 다닐 때 누군가를 도왔던 경험 등을 물었다고 해요. 결과가 나오기까지 두 달 정도 걸렸어요.</div>
+      <div class="tip"><span class="heart-label">🩷 팁</span> 현재 중동3사 타사 합격했습니다. 포기만 하지 않으면 다 되는 거 같아요. 파이널탈만 4번이었어요 ㅎㅎ 희망을 가지고 포기만 하지 마세요!</div>
+    </div>
+  </div>
+
+  <!-- 공개 3: 에어프레미아 - SUSU -->
+  <div class="airline">
+    <div class="airline-title">🌴 에어프레미아</div>
+    <div class="card">
+      <span class="name">SUSU</span> · <span class="meta"><span class="result wait">결과 대기중</span></span>
+      <div class="timeline"><b>타임라인</b> 지원(7/7~7/14) → 서류 결과(7/22) → 실무면접(7/28~7/31) → 컬처핏 면접 &amp; 체력테스트(8/10~8/13)</div>
+      <div class="story">질문이 정말 다양하고 촘촘했어요. 공통 질문으로 "오늘 면접을 위해 신경 쓴 것"을 물었고, 영어로는 "날 웃게 만드는 것"이 나왔대요. 그 외에도 "좋은 학교인데 왜 승무원을 하려는지", "담요가 제공되지 않는 노선에서 승객이 담요를 달라고 하면 어떻게 대처할지", 고객 응대 경험(VOC)이 있는 지원자에게는 "고객이 컴플레인을 걸겠다고 할 때 어떻게 넘길지"를 물으셨대요. 다른 항공사 지원 경험을 묻고 왜 안 됐는지, 만약 다른 항공사와 면접일이 겹쳤다면 어디로 갔을지 같은 질문도 나왔고, 지인 중 에어프레미아 재직자가 있는 분들껜 그 회사의 장단점을 말해보라고도 하셨대요. "과감한 실행과는 안 어울린다는 평가를 받은 적 있는데, 그럼에도 가장 과감했던 선택이 있었는지"처럼 꽤 개인적인 질문도 나왔고, 팀 활동에서 함께 일하고 싶지 않은 유형과 그 사람과 협업하기 위한 노력, 전 직장(올리브영) 근무 경험에서 업무를 개선했던 사례, 전공과 다른 진로를 택한 이유, 개인 루틴, 승무원과 잘 맞는다고 생각한 본인의 성향까지 폭넓게 물으셨어요.</div>
+      <div class="tip"><span class="heart-label">🩷 팁</span> 복장은 국내 면접 정석대로 검정 치마 입고 갔어요.</div>
+    </div>
+  </div>
+
+  <!-- 공개 4: 비엣젯 - 쿠 -->
+  <div class="airline">
+    <div class="airline-title">🇻🇳 비엣젯항공</div>
+    <div class="card">
+      <span class="name">쿠</span> · <span class="meta">호치민 · <span class="result pass">합격 🎉</span></span>
+      <div class="timeline"><b>타임라인</b> 지원(6/27) → 인비수령(6/29) → 현지 1차~파이널면접(7/4) → 메디컬 수령(7/8) → 메디컬 체크(7/10)</div>
+      <div class="story">전 과정이 영어로 진행됐대요. "베트남 온 적 있어?"로 시작해서 4월에 언니와 다낭 여행 갔던 이야기, 날씨와 음식이 좋았다는 이야기로 자연스럽게 이어졌고, "왜 베트남에서 일하고 싶은지"엔 여행하며 느낀 현지인들의 친절함이 인상 깊었다고 답했대요. "왜 우리 항공사인지"엔 비엣젯의 슬로건 "Enjoy flight"가 본인이 사람들과 소통하는 걸 즐기는 성향과 잘 맞는다고 답했고, "베트남 지원자도 많은데 왜 한국인을 뽑아야 하는지"라는 날카로운 질문엔 "비엣젯은 한국 노선이 많아서, 기내에서 한국 승객들이 한국 승무원과 소통하는 게 더 편할 것"이라고 답했대요. 마지막 "그중에 왜 너?"라는 질문엔 본인 경력과 중국어 능력을 근거로 다양한 승객을 응대할 자신이 있다고 답했다고 해요.</div>
+      <div class="tip"><span class="heart-label">🩷 팁</span> 답변 내용보다는 겸손하고 배려심 있는 태도, 그리고 항상 미소를 잃지 않는 게 굉장히 중요하다고 생각합니다!!</div>
+    </div>
+  </div>
+
+  <!-- 공개 5: 쿠웨이트 - 조이닝대기중 -->
+  <div class="airline">
+    <div class="airline-title">🇰🇼 쿠웨이트항공</div>
+    <div class="card">
+      <span class="name">조이닝대기중</span> · <span class="meta"><span class="result pass">합격 🎉</span></span>
+      <div class="timeline"><b>타임라인</b> 지원(3/11) → 1차 디스커션 &amp; 개인질문(3/29) → 영어테스트(4/2) → 1:1 파이널면접(4/2)</div>
+      <div class="story">디스커션 조에서는 "승무원으로서 일할 때 중요한 점"이 주제였고, 소통이 중요하다는 쪽으로 의견이 모였대요. 개인질문에서는 이력이 특이한 편이라 이력과 진로 변경 이유를 물으셨고, 파이널에서는 다른 지원자들은 자기소개부터 시작했다는데 본인은 해외 이력부터 질문받았대요. 중국어를 conversational로 적어냈더니 실제로 어느 정도 가능한지 물으셨고, 메뉴 추천이나 화장실·좌석 안내 정도는 가능하다고 솔직히 답한 뒤 1부터 40까지 중국어로 세어보라는 요청도 받았대요. "왜 쿠웨이트인지"라는 질문엔, 쿠웨이트-뉴욕 직항 노선이 있다는 걸 알고 있었고, 본인이 보스턴에서 공부했으며 아직 그곳에 친구들이 있어 레이오버로 뉴욕에 가면 만날 수 있을 것 같다는 이야기를 풀어냈어요.</div>
+      <div class="tip"><span class="heart-label">🩷 팁</span> 자신감이 정말 중요한 거 같아요! 저는 1차 면접과 파이널 분위기를 토대로 "내가 영어 제일 잘하고 제일 예쁘다" 마인드 세팅하고 들어갔고, 들었던 피드백들 생각하면서 차분하게 답변했어요!</div>
+    </div>
+  </div>
+
+  <!-- ============ 잠금 후기 12건 ============ -->
+  <div class="section-label">🔒 잠금 후기 12건</div>
+
+  <!-- 잠금: 에미레이트 - 지도, 에미렛바라기 -->
+  <div class="airline">
+    <div class="airline-title">🌏 에미레이트항공</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">지도</span> · <span class="meta">6월, 오픈데이 · <span class="result fail">불합격</span></span>
+        <div class="story">오픈데이 현장에서는 이름, 나이, 일 경험(최대 2개)을 묻는 정도로 간단하게 진행됐대요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">에미렛바라기</span> · <span class="meta"><span class="result fail">불합격</span></span>
+        <div class="story">지원한 다음 날 바로 인비를 받았고, 면접에서는 일하면서 중요한 세 가지, 팀워크 관련 상황 질문이 나왔대요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- 잠금: 에어프레미아 - 준비생22 -->
+  <div class="airline">
+    <div class="airline-title">🌴 에어프레미아</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">준비생22</span> · <span class="meta">2026년 2차 · <span class="result wait">결과 대기중</span></span>
+        <div class="story">면접관이 "주변에 에어프레미아 다니는 분이 계신가요?"라고 묻고, 있다고 답한 분께 추가 질문까지 하신 독특한 면접이었대요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- 잠금: 비엣젯 - 시드니 -->
+  <div class="airline">
+    <div class="airline-title">🇻🇳 비엣젯항공</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">시드니</span> · <span class="meta">하노이 · <span class="result pass">합격 🎉</span></span>
+        <div class="story">AI 스크리닝, BMI 체크, 캣워크, 탤런트쇼까지 단계가 정말 많았고, 화장 팁까지 자세히 공유해주셨어요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- 잠금: 리야드에어 - 비전공, Flyflyfly -->
+  <div class="airline">
+    <div class="airline-title">🛬 리야드에어</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">비전공</span> · <span class="meta"><span class="result wait">결과 대기중</span></span>
+        <div class="story">영상면접이 3파트(상황판단 8문제 + 2분 영상 자기소개 + 듣기 10문제)로 나뉘어 있었고 실전형 문제가 다수 출제됐대요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">Flyflyfly</span> · <span class="meta">2025년 10월 지원 · <span class="result fail">불합격</span></span>
+        <div class="story">전현직 대상 채용이라 경력(CV) 기반 질문이 많았어요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- 잠금: 플라이두바이 - ojn, 올해윙달쟈 -->
+  <div class="airline">
+    <div class="airline-title">🕊️ 플라이두바이</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">ojn</span> · <span class="meta">2024년 12월 지원 · <span class="result pass">합격 🎉</span></span>
+        <div class="story">현직 승무원분이 "우린 널 평가하는 게 아니라 진짜 너란 사람이 어떤 사람인지 알아보려는 것"이라고 해주신 인상적인 면접이었대요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">올해윙달쟈</span> · <span class="meta">2026.02.19 지원 · <span class="result wait">결과 대기중</span></span>
+        <div class="story">약 20명이 둥글게 앉아 디스커션을 진행했고, 1차는 학원 대행이라 셀프 준비도 충분하다는 팁을 주셨어요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- 잠금: 싱가포르 - 비행 -->
+  <div class="airline">
+    <div class="airline-title">🌸 싱가포르항공</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">비행</span> · <span class="meta">2026년 1월 지원 · <span class="result pass">합격 🎉</span></span>
+        <div class="story">디스커션 주제, 영어테스트 문제 구성, 파이널 질문까지 상세하게 공유. calm하고 단아한 모습이 핵심이라는 팁도 있어요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- 잠금: 쿠웨이트 - 준비생 -->
+  <div class="airline">
+    <div class="airline-title">🇰🇼 쿠웨이트항공</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">준비생</span> · <span class="meta">3월 지원 · <span class="result fail">불합격</span></span>
+        <div class="story">1차 디스커션 주제는 "dream destination"이었고, 파이널에서 자기소개와 "why 쿠웨이트"를 물으셨대요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- 잠금: 오만항공 -->
+  <div class="airline">
+    <div class="airline-title">🕌 오만항공</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">do my best</span> · <span class="meta">2023.02 지원 · <span class="result fail">불합격</span></span>
+        <div class="story">면접관 3분 대 지원자 4명. CV 기반 질문부터 라마단, 바리스타 경력, 중국어 가능 여부까지 폭넓게 물으셨어요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- 잠금: 에어아라비아 -->
+  <div class="airline">
+    <div class="airline-title">🐫 에어아라비아</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">미래승무원</span> · <span class="meta">11월 지원 · <span class="result fail">불합격</span></span>
+        <div class="story">8명이 8분 동안 디스커션. 화장법과 리액션에 대한 구체적인 팁을 공유해주셨어요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- 잠금: 베트남항공 -->
+  <div class="airline">
+    <div class="airline-title">🛫 베트남항공</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">싱싱카</span> · <span class="meta">2025년 10월 지원 · <span class="result fail">불합격</span></span>
+        <div class="story">1차 학원면접부터 아오자이 피팅 2차까지, 단계별로 자세하게 공유해주셨어요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- 잠금: KLM -->
+  <div class="airline">
+    <div class="airline-title">🇳🇱 KLM 네덜란드항공</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">뷰뷰</span> · <span class="meta"><span class="result pass">합격 🎉</span></span>
+        <div class="story">"요즘 Gen-Z의 특성이 어떠냐"는 독특한 질문이 나왔고, 자연스러움을 살리는 전략을 공유해주셨어요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- 잠금: 에티하드 -->
+  <div class="airline">
+    <div class="airline-title">🦅 에티하드항공</div>
+    <div class="card locked">
+      <div class="locked-content">
+        <span class="name">윙단다</span> · <span class="meta">2025.03 지원 · <span class="result fail">불합격</span></span>
+        <div class="story">NPS가 뭔지, 왜 중요한지 등 개념 질문이 나왔고, 암기보다 대화형 답변을 선호하시는 분위기였대요.</div>
+      </div>
+      <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+    </div>
+  </div>
+
+  <!-- ============ CTA ============ -->
+  <div class="cta-section">
+    <div class="cta-group">
+      <a class="cta-btn primary" href="#">📝 면접 후기 남기기</a>
+      <div class="cta-sub">면접 다녀오셨나요?</div>
+    </div>
+    <div class="cta-divider"><span>또는</span></div>
+    <div class="cta-group">
+      <a class="cta-btn secondary" href="#">👋 내 준비 현황 공유하기</a>
+      <div class="cta-sub">아직 면접 전이라면?</div>
+    </div>
+    <div class="cta-sub" style="margin-top: 18px;">둘 중 하나만 작성하면 <b>전체 17건</b> 모두 열람 가능!</div>
+  </div>
+
+  <div class="footer">
+    💛 읽어주셔서 감사합니다 💛<br>
+    합격하신 분도, 기다리시는 분도, 몇 번을 다시 도전하신 분도 —<br>
+    모두 지금 이 순간에도 준비하고 계신 분들께 큰 힘이 될 거예요.<br>
+    더 많은 후기는 언제든 환영입니다 🩷 다음 정리본에서 또 만나요 ✈️
+  </div>
+
+</div>
+</body>
+</html>
