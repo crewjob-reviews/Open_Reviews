@@ -5,58 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>승무원 면접 후기 모음</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Jua&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --sky: #eaf4ff; --sky-deep: #cfe8ff; --pink: #ffe3ec; --pink-deep: #ffc4d6;
   --lav: #f1ebff; --ink: #4a4458; --heart: #ff8fab; --card-bg: #ffffff; --lock-bg: #f8f6ff;
 }
 * { box-sizing: border-box; }
-body { margin:0; font-family:'Gaegu',sans-serif; background:linear-gradient(180deg,var(--sky) 0%,var(--lav) 100%); color:var(--ink); padding:24px 14px 60px; }
+body { margin:0; font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif; letter-spacing:-0.01em; background:linear-gradient(180deg,var(--sky) 0%,var(--lav) 100%); color:var(--ink); padding:24px 14px 60px; }
 .wrap { max-width:720px; margin:0 auto; }
-h1 { font-family:'Jua',sans-serif; text-align:center; font-size:2.1rem; color:#6b5b95; margin-bottom:4px; }
-.sub { text-align:center; font-size:1.1rem; color:#8b7fa8; margin-bottom:20px; }
-.intro { background:var(--card-bg); border-radius:20px; padding:18px 22px; margin-bottom:28px; box-shadow:0 4px 14px rgba(140,120,180,0.12); font-size:1.15rem; line-height:1.7; }
-.unlock-banner { background:linear-gradient(135deg,#fff5f8 0%,#f3edff 100%); border:2px dashed var(--heart); border-radius:20px; padding:20px 22px; margin-bottom:28px; text-align:center; font-size:1.1rem; line-height:1.7; }
+h1 { font-family:'Jua',sans-serif; text-align:center; font-size:1.95rem; color:#6b5b95; margin-bottom:4px; }
+.sub { text-align:center; font-size:0.98rem; color:#8b7fa8; margin-bottom:20px; }
+.intro { background:var(--card-bg); border-radius:20px; padding:18px 22px; margin-bottom:28px; box-shadow:0 4px 14px rgba(140,120,180,0.12); font-size:0.94rem; line-height:1.75; }
+.unlock-banner { background:linear-gradient(135deg,#fff5f8 0%,#f3edff 100%); border:2px dashed var(--heart); border-radius:20px; padding:20px 22px; margin-bottom:28px; text-align:center; font-size:0.94rem; line-height:1.75; }
 .unlock-banner strong { color:#6b5b95; font-family:'Jua',sans-serif; font-size:1.2rem; }
 .unlock-methods { display:flex; flex-direction:column; gap:8px; margin-top:14px; text-align:left; }
-.unlock-method { background:white; border-radius:14px; padding:12px 16px; display:flex; align-items:center; gap:10px; font-size:1.05rem; box-shadow:0 2px 8px rgba(140,120,180,0.08); }
+.unlock-method { background:white; border-radius:14px; padding:12px 16px; display:flex; align-items:center; gap:10px; font-size:0.95rem; box-shadow:0 2px 8px rgba(140,120,180,0.08); }
 .unlock-method .icon { font-size:1.5rem; flex-shrink:0; }
 .unlock-method .desc .label { font-family:'Jua',sans-serif; color:#6b5b95; font-size:1.05rem; }
-.unlock-method .desc .detail { color:#9b8fb5; font-size:0.95rem; }
+.unlock-method .desc .detail { color:#9b8fb5; font-size:0.88rem; }
 .stats-bar { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:24px; }
 .stat-chip { background:white; border-radius:999px; padding:6px 16px; font-size:0.95rem; color:#6b5b95; box-shadow:0 2px 8px rgba(140,120,180,0.1); font-family:'Jua',sans-serif; }
 .edition-label { font-family:'Jua',sans-serif; font-size:1.35rem; color:#8a5fbd; text-align:center; margin:40px 0 22px; display:flex; align-items:center; gap:14px; }
 .edition-label::before, .edition-label::after { content:''; flex:1; height:2px; background:linear-gradient(90deg,transparent,#c9b8e8,transparent); }
 .airline { margin-bottom:34px; }
 .airline-title { font-family:'Jua',sans-serif; font-size:1.5rem; color:#5b6ea8; background:var(--sky-deep); display:inline-block; padding:6px 18px; border-radius:999px; margin-bottom:14px; }
-.card { background:var(--card-bg); border-radius:18px; padding:18px 20px; margin-bottom:14px; box-shadow:0 4px 14px rgba(140,120,180,0.1); line-height:1.8; font-size:1.12rem; break-inside:avoid; }
-.name { font-family:'Jua',sans-serif; color:#f27ba0; font-size:1.2rem; }
-.meta { color:#9b8fb5; font-size:1rem; }
+.card { background:var(--card-bg); border-radius:18px; padding:18px 20px; margin-bottom:14px; box-shadow:0 4px 14px rgba(140,120,180,0.1); line-height:1.75; font-size:0.94rem; break-inside:avoid; }
+.name { font-family:'Jua',sans-serif; color:#f27ba0; font-size:1.12rem; }
+.meta { color:#9b8fb5; font-size:0.85rem; }
 .result { font-weight:700; }
 .result.pass { color:#4caf7d; }
 .result.wait { color:#c99a3d; }
-.timeline { margin-top:10px; background:var(--lav); border-radius:12px; padding:8px 14px; font-size:1rem; color:#6b5b95; }
+.timeline { margin-top:10px; background:var(--lav); border-radius:12px; padding:9px 14px; font-size:0.87rem; color:#6b5b95; }
 .timeline b { color:#8a5fbd; }
-.story { margin-top:10px; }
-.tip { margin-top:12px; background:var(--pink); border-radius:14px; padding:12px 16px; font-size:1.08rem; }
+.story { margin-top:12px; }
+.story br + br, .tip br + br { content:""; display:block; margin-top:10px; }
+.tip { margin-top:12px; background:var(--pink); border-radius:14px; padding:13px 16px; font-size:0.9rem; }
 .tip .heart-label { color:var(--heart); font-weight:700; margin-right:4px; }
 .card.locked { position:relative; overflow:hidden; cursor:default; min-height:120px; }
 .card.locked .locked-content { filter:blur(6px); user-select:none; pointer-events:none; }
 .card.locked .lock-overlay { position:absolute; top:0; left:0; right:0; bottom:0; background:linear-gradient(180deg,rgba(255,255,255,0.3) 0%,rgba(248,246,255,0.95) 60%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; border-radius:18px; }
 .lock-icon { font-size:2rem; opacity:0.6; }
-.lock-text { font-family:'Jua',sans-serif; color:#6b5b95; font-size:1.05rem; text-align:center; padding:0 20px; }
+.lock-text { font-family:'Jua',sans-serif; color:#6b5b95; font-size:1rem; text-align:center; padding:0 20px; }
 .cta-section { background:linear-gradient(135deg,#fff5f8 0%,#f3edff 100%); border-radius:22px; padding:26px 24px; text-align:center; margin:36px 0 10px; box-shadow:0 4px 14px rgba(140,120,180,0.12); }
 .cta-group { margin-bottom:6px; }
 .cta-btn { display:inline-block; font-family:'Jua',sans-serif; font-size:1.15rem; padding:13px 30px; border-radius:999px; text-decoration:none; margin-bottom:6px; }
 .cta-btn.primary { background:var(--heart); color:white; box-shadow:0 4px 12px rgba(255,143,171,0.4); }
 .cta-btn.secondary { background:white; color:#6b5b95; border:2px solid #c9b8e8; }
-.cta-sub { font-size:1rem; color:#9b8fb5; }
+.cta-sub { font-size:0.92rem; color:#9b8fb5; }
 .cta-divider { display:flex; align-items:center; gap:10px; margin:14px 0; color:#c9b8e8; font-size:0.95rem; }
 .cta-divider::before, .cta-divider::after { content:''; flex:1; height:1px; background:#e2d8f3; }
-.footer { text-align:center; margin-top:40px; font-size:1.15rem; color:#8b7fa8; line-height:1.9; }
-.watermark { position:fixed; bottom:14px; right:20px; font-family:'Gaegu',sans-serif; font-size:0.75rem; color:rgba(139,127,168,0.45); }
-@media (max-width:480px) { h1{font-size:1.7rem;} .stats-bar{gap:8px;} .stat-chip{font-size:0.85rem; padding:5px 12px;} }
+.footer { text-align:center; margin-top:40px; font-size:0.94rem; color:#8b7fa8; line-height:1.9; }
+.watermark { position:fixed; bottom:14px; right:20px; font-family:'Noto Sans KR',sans-serif; font-size:0.72rem; color:rgba(139,127,168,0.45); }
+@media (max-width:480px) { h1{font-size:1.6rem;} .stats-bar{gap:8px;} .stat-chip{font-size:0.85rem; padding:5px 12px;} }
 </style>
 </head>
 <body>
@@ -106,7 +107,7 @@ h1 { font-family:'Jua',sans-serif; text-align:center; font-size:2.1rem; color:#6
     <div class="card">
       <span class="name">부리또</span> · <span class="meta">1월 지원</span>
       <div class="timeline"><b>타임라인</b> 지원(1/12) → 하이어뷰(1/14) → 인비테이션(3/13) → 대면면접(4/25)</div>
-      <div class="story">1차는 6명이 함께 들어가는 디베이트였고, 주제는 "money can buy happiness"로 무난한 편이었대요. 면접관은 남녀 각 한 분씩이었고, 디베이트라기보다는 이야기를 나눈 뒤 한 명씩 돌아가며 발표하는 방식이었다고 해요. 발표 내용보다는 말하는 태도와 이미지를 더 보는 느낌이었고, 그 조에서는 두 명이 합격했대요. 두 번째 영어 테스트는 문법 문제 몇 개와 긴 지문을 읽고 답하는 문제였는데, 문법은 어려웠지만 지문 문제는 단어 찾기에 가까워서 잘 읽으면 무난히 풀 수 있었다고 해요. 파이널에서는 현재 어떤 일을 하는지 묻고 꼬리질문이 이어졌고, 승무원을 왜 하고 싶은지 물으셨대요. 마지막으로 한국어 지문을 읽어보라고 한 뒤 마무리됐어요.</div>
+      <div class="story">1차는 6명이 함께 들어가는 디베이트였고, 주제는 "money can buy happiness"로 무난한 편이었대요. 면접관은 남녀 각 한 분씩이었고, 디베이트라기보다는 이야기를 나눈 뒤 한 명씩 돌아가며 발표하는 방식이었다고 해요. 발표 내용보다는 말하는 태도와 이미지를 더 보는 느낌이었고, 그 조에서는 두 명이 합격했대요. <br><br>두 번째 영어 테스트는 문법 문제 몇 개와 긴 지문을 읽고 답하는 문제였는데, 문법은 어려웠지만 지문 문제는 단어 찾기에 가까워서 잘 읽으면 무난히 풀 수 있었다고 해요. <br><br>파이널에서는 현재 어떤 일을 하는지 묻고 꼬리질문이 이어졌고, 승무원을 왜 하고 싶은지 물으셨대요. 마지막으로 한국어 지문을 읽어보라고 한 뒤 마무리됐어요.</div>
     </div>
   </div>
   <div class="edition-label">1탄 (2026.08.08)</div>
@@ -133,7 +134,7 @@ h1 { font-family:'Jua',sans-serif; text-align:center; font-size:2.1rem; color:#6
     <div class="card">
       <span class="name">SUSU</span> · <span class="meta"><span class="result wait">결과 대기중</span></span>
       <div class="timeline"><b>타임라인</b> 지원(7/7~7/14) → 서류 결과(7/22) → 실무면접(7/28~7/31) → 컬처핏 면접 &amp; 체력테스트(8/10~8/13)</div>
-      <div class="story">질문이 정말 다양하고 촘촘했어요. 공통 질문으로 "오늘 면접을 위해 신경 쓴 것"을 물었고, 영어로는 "날 웃게 만드는 것"이 나왔대요. 그 외에도 "좋은 학교인데 왜 승무원을 하려는지", "담요가 제공되지 않는 노선에서 승객이 담요를 달라고 하면 어떻게 대처할지", 고객 응대 경험(VOC)이 있는 지원자에게는 "고객이 컴플레인을 걸겠다고 할 때 어떻게 넘길지"를 물으셨대요. 다른 항공사 지원 경험을 묻고 왜 안 됐는지, 만약 다른 항공사와 면접일이 겹쳤다면 어디로 갔을지 같은 질문도 나왔고, 지인 중 에어프레미아 재직자가 있는 분들껜 그 회사의 장단점을 말해보라고도 하셨대요. "과감한 실행과는 안 어울린다는 평가를 받은 적 있는데, 그럼에도 가장 과감했던 선택이 있었는지"처럼 꽤 개인적인 질문도 나왔고, 팀 활동에서 함께 일하고 싶지 않은 유형과 그 사람과 협업하기 위한 노력, 전 직장(올리브영) 근무 경험에서 업무를 개선했던 사례, 전공과 다른 진로를 택한 이유, 개인 루틴, 승무원과 잘 맞는다고 생각한 본인의 성향까지 폭넓게 물으셨어요. 다른 항공사 현직 경력이 있는 지원자에게는 이전 회사에서의 이직 이유와 지금 다시 이직하려는 이유도 물으셨다고 해요.</div>
+      <div class="story">질문이 정말 다양하고 촘촘했어요. 공통 질문으로 "오늘 면접을 위해 신경 쓴 것"을 물었고, 영어로는 "날 웃게 만드는 것"이 나왔대요. <br><br>그 외에도 "좋은 학교인데 왜 승무원을 하려는지", "담요가 제공되지 않는 노선에서 승객이 담요를 달라고 하면 어떻게 대처할지", 고객 응대 경험(VOC)이 있는 지원자에게는 "고객이 컴플레인을 걸겠다고 할 때 어떻게 넘길지"를 물으셨대요. 다른 항공사 지원 경험을 묻고 왜 안 됐는지, 만약 다른 항공사와 면접일이 겹쳤다면 어디로 갔을지 같은 질문도 나왔고, 지인 중 에어프레미아 재직자가 있는 분들껜 그 회사의 장단점을 말해보라고도 하셨대요. <br><br>"과감한 실행과는 안 어울린다는 평가를 받은 적 있는데, 그럼에도 가장 과감했던 선택이 있었는지"처럼 꽤 개인적인 질문도 나왔고, 팀 활동에서 함께 일하고 싶지 않은 유형과 그 사람과 협업하기 위한 노력, 전 직장(올리브영) 근무 경험에서 업무를 개선했던 사례, 전공과 다른 진로를 택한 이유, 개인 루틴, 승무원과 잘 맞는다고 생각한 본인의 성향까지 폭넓게 물으셨어요. 다른 항공사 현직 경력이 있는 지원자에게는 이전 회사에서의 이직 이유와 지금 다시 이직하려는 이유도 물으셨다고 해요.</div>
       <div class="tip"><span class="heart-label">🩷 팁</span> 복장은 국내 면접 정석대로 검정 치마 입고 갔어요.</div>
     </div>
   </div>
@@ -142,7 +143,7 @@ h1 { font-family:'Jua',sans-serif; text-align:center; font-size:2.1rem; color:#6
     <div class="card">
       <span class="name">쿠</span> · <span class="meta">호치민 · <span class="result pass">합격 🎉</span></span>
       <div class="timeline"><b>타임라인</b> 지원(6/27) → 인비수령(6/29) → 현지 1차~파이널면접(7/4) → 메디컬 수령(7/8) → 메디컬 체크(7/10)</div>
-      <div class="story">전 과정이 영어로 진행됐대요. "베트남 온 적 있어?"로 시작해서 4월에 언니와 다낭 여행 갔던 이야기, 날씨와 음식이 좋았다는 이야기로 자연스럽게 이어졌고, "왜 베트남에서 일하고 싶은지"엔 여행하며 느낀 현지인들의 친절함이 인상 깊었다고 답했대요. "왜 우리 항공사인지"엔 비엣젯의 슬로건 "Enjoy flight"가 본인이 사람들과 소통하는 걸 즐기는 성향과 잘 맞는다고 답했고, "베트남 지원자도 많은데 왜 한국인을 뽑아야 하는지"라는 날카로운 질문엔 "비엣젯은 한국 노선이 많아서, 기내에서 한국 승객들이 한국 승무원과 소통하는 게 더 편할 것"이라고 답했대요. 마지막 "그중에 왜 너?"라는 질문엔 본인 경력과 중국어 능력을 근거로 다양한 승객을 응대할 자신이 있다고 답했다고 해요.</div>
+      <div class="story">전 과정이 영어로 진행됐대요. "베트남 온 적 있어?"로 시작해서 4월에 언니와 다낭 여행 갔던 이야기, 날씨와 음식이 좋았다는 이야기로 자연스럽게 이어졌고, "왜 베트남에서 일하고 싶은지"엔 여행하며 느낀 현지인들의 친절함이 인상 깊었다고 답했대요. <br><br>"왜 우리 항공사인지"엔 비엣젯의 슬로건 "Enjoy flight"가 본인이 사람들과 소통하는 걸 즐기는 성향과 잘 맞는다고 답했고, "베트남 지원자도 많은데 왜 한국인을 뽑아야 하는지"라는 날카로운 질문엔 "비엣젯은 한국 노선이 많아서, 기내에서 한국 승객들이 한국 승무원과 소통하는 게 더 편할 것"이라고 답했대요. 마지막 "그중에 왜 너?"라는 질문엔 본인 경력과 중국어 능력을 근거로 다양한 승객을 응대할 자신이 있다고 답했다고 해요.</div>
       <div class="tip"><span class="heart-label">🩷 팁</span> 답변 내용보다는 겸손하고 배려심 있는 태도, 그리고 항상 미소를 잃지 않는 게 굉장히 중요하다고 생각합니다!!</div>
     </div>
   </div>
@@ -151,7 +152,7 @@ h1 { font-family:'Jua',sans-serif; text-align:center; font-size:2.1rem; color:#6
     <div class="card">
       <span class="name">조이닝대기중</span> · <span class="meta"><span class="result pass">합격 🎉</span></span>
       <div class="timeline"><b>타임라인</b> 지원(3/11) → 1차 디스커션 &amp; 개인질문(3/29) → 영어테스트(4/2) → 1:1 파이널면접(4/2)</div>
-      <div class="story">디스커션 조에서는 "승무원으로서 일할 때 중요한 점"이 주제였고, 소통이 중요하다는 쪽으로 의견이 모였대요. 개인질문에서는 이력이 특이한 편이라 이력과 진로 변경 이유를 물으셨고, 파이널에서는 다른 지원자들은 자기소개부터 시작했다는데 본인은 해외 이력부터 질문받았대요. 중국어를 conversational로 적어냈더니 실제로 어느 정도 가능한지 물으셨고, 메뉴 추천이나 화장실·좌석 안내 정도는 가능하다고 솔직히 답한 뒤 1부터 40까지 중국어로 세어보라는 요청도 받았대요. "왜 쿠웨이트인지"라는 질문엔, 쿠웨이트-뉴욕 직항 노선이 있다는 걸 알고 있었고, 본인이 보스턴에서 공부했으며 아직 그곳에 친구들이 있어 레이오버로 뉴욕에 가면 만날 수 있을 것 같다는 이야기를 풀어냈어요. 향수병을 줄이는 게 승무원으로 오래 일하는 데 가장 중요하다고 생각해서 쿠웨이트를 지원했다고 답하자, 면접관(멕티 대행)이 마침 쿠웨이트-인천 노선이 새로 생긴다는 이야기를 해주셔서 자연스럽게 대화가 이어졌대요.</div>
+      <div class="story">디스커션 조에서는 "승무원으로서 일할 때 중요한 점"이 주제였고, 소통이 중요하다는 쪽으로 의견이 모였대요. 개인질문에서는 이력이 특이한 편이라 이력과 진로 변경 이유를 물으셨고, 파이널에서는 다른 지원자들은 자기소개부터 시작했다는데 본인은 해외 이력부터 질문받았대요. <br><br>중국어를 conversational로 적어냈더니 실제로 어느 정도 가능한지 물으셨고, 메뉴 추천이나 화장실·좌석 안내 정도는 가능하다고 솔직히 답한 뒤 1부터 40까지 중국어로 세어보라는 요청도 받았대요. <br><br>"왜 쿠웨이트인지"라는 질문엔, 쿠웨이트-뉴욕 직항 노선이 있다는 걸 알고 있었고, 본인이 보스턴에서 공부했으며 아직 그곳에 친구들이 있어 레이오버로 뉴욕에 가면 만날 수 있을 것 같다는 이야기를 풀어냈어요. 향수병을 줄이는 게 승무원으로 오래 일하는 데 가장 중요하다고 생각해서 쿠웨이트를 지원했다고 답하자, 면접관(멕티 대행)이 마침 쿠웨이트-인천 노선이 새로 생긴다는 이야기를 해주셔서 자연스럽게 대화가 이어졌대요.</div>
       <div class="tip"><span class="heart-label">🩷 팁</span> 자신감이 정말 중요한 거 같아요! 저는 1차 면접과 파이널 분위기를 토대로 "내가 영어 제일 잘하고 제일 예쁘다" 마인드 세팅하고 들어갔고, 들었던 피드백들 생각하면서 차분하게 답변했어요! 확실히 be myself가 가장 잘 됐던 면접인 거 같고, 그만큼 좋은 결과가 따라온 것 같습니다:)</div>
     </div>
   </div>
@@ -215,7 +216,7 @@ h1 { font-family:'Jua',sans-serif; text-align:center; font-size:2.1rem; color:#6
       <div class="locked-content">
       <span class="name">비전공</span> · <span class="meta"><span class="result wait">결과 대기중</span></span>
       <div class="timeline"><b>타임라인</b> 지원(7/12) → 영상면접 링크 수신(7/15) → 영상면접 응시(7/31)</div>
-      <div class="story">파트가 셋으로 나뉘어 있었대요. 1부는 상황판단 8문제(4지선다, 사람마다 랜덤 출제인 듯), 예를 들면 "응급상황 이후 승객이 불안정해지고 집중이 안 될 때 어떻게 대처할지", "착륙 20분 전 약을 복용하기 위해 깨워달라는 승객에게 어떻게 할지", "스트레스 받으면 농담하는 동료와 조용해지는 동료가 있을 때 나는 어떻게 할지", "음료를 쏟아 승객이 창피해할 때 어떻게 대처할지" 같은 실전형 문제들이었어요. 2부는 2분 영상 자기소개(질문 세 가지 중 하나가 랜덤으로 나오는 듯), 3부는 듣기 10문제였어요. 마지막에는 평가에 반영 안 되는 것으로 보이는 사용 경험 설문(예: Maki 프로그램 사용 경험을 줄글로 작성)도 있었대요.</div>
+      <div class="story">파트가 셋으로 나뉘어 있었대요. 1부는 상황판단 8문제(4지선다, 사람마다 랜덤 출제인 듯), 예를 들면 "응급상황 이후 승객이 불안정해지고 집중이 안 될 때 어떻게 대처할지", "착륙 20분 전 약을 복용하기 위해 깨워달라는 승객에게 어떻게 할지", "스트레스 받으면 농담하는 동료와 조용해지는 동료가 있을 때 나는 어떻게 할지", "음료를 쏟아 승객이 창피해할 때 어떻게 대처할지" 같은 실전형 문제들이었어요. <br><br>2부는 2분 영상 자기소개(질문 세 가지 중 하나가 랜덤으로 나오는 듯), 3부는 듣기 10문제였어요. 마지막에는 평가에 반영 안 되는 것으로 보이는 사용 경험 설문(예: Maki 프로그램 사용 경험을 줄글로 작성)도 있었대요.</div>
       <div class="tip"><span class="heart-label">🩷 팁</span> CV를 제출하면 영상면접 링크는 거의 다 보내준대요. 아이패드로 하면 화면이 광각으로 나온다는 후기를 봤는데, 저는 컴퓨터로 해서 얼굴이 크게 나왔어요. 시작하면 전체화면으로 진입하니 알림 같은 걸 미리 꺼두는 게 좋고, 메모장도 못 봐요. 18일, 15일 남았을 때 독촉 메일이 왔지만 가볍게 넘겼어요 ㅎㅎ</div>
       </div>
       <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
@@ -236,8 +237,8 @@ h1 { font-family:'Jua',sans-serif; text-align:center; font-size:2.1rem; color:#6
       <div class="locked-content">
       <span class="name">ojn</span> · <span class="meta">2024년 12월 지원 · <span class="result pass">합격 🎉</span></span>
       <div class="timeline"><b>타임라인</b> BCCA면접(12/21) → 1차 합격 메일(12/22) → 온라인 영어테스트 → 온라인 하이어뷰(25.01.30) → 대면면접(25.02.23) → 합격 메일(25.02.26) → 조인(4월)</div>
-      <div class="story">대면 면접 때는 특별히 꼬리질문이나 주목받는 순간은 없었지만, 하이어뷰(영상면접)는 현직 승무원과 HR 인사팀까지 2:1 구도로 진행돼서 조금 긴장했었대요. 그런데 현직 승무원분이 "긴장하지 말라고, 우린 널 평가하는 게 아니라 진짜 너란 사람이 어떤 사람인지 알아보려고 온 거니까 궁금한 게 있거나 모르는 게 있으면 언제든 편하게 말해달라"고 해주신 말이 인상 깊었다고 해요. 질문 자체는 크게 특별한 건 없이 질문-답변이 이어지는 방식에 한두 번 꼬리질문이 있는 정도였지만, 타 항공사와 다르게 "정말 나란 사람을 알아보려고 하는구나"라는 느낌을 받아서 정신적 부담을 많이 내려놓고 임할 수 있었다고 해요.</div>
-      <div class="tip"><span class="heart-label">🩷 팁</span> "Be yourself." 저도 승준생 땐 그 말을 들을 때마다 생각했어요. '나는 나대로 하고 있는 것 같은데... 나는 왜 안 되지?' 오히려 그 말이 너무 어렵게 느껴졌던 것 같아요. 정말 나는 나답게 하고 있는 걸까, 아니면 내가 나답다고 착각하고 있는 걸까. 그런 고민도 참 많이 했습니다. 저 또한 여기까지 오는데 정말 긴 시간이 걸렸고, 그 시간 동안 수없이 흔들렸고, 포기하고 싶은 순간도 너무 있었습니다. 그래도 한 가지는 말씀드리고 싶어요. 본인이 가는 방향이 맞다는 직감이 있다면, 너무 쉽게 포기하지 않았으면 좋겠습니다. 모든 사람에게는 각자의 타이밍이 있는 것 같아요. 누군가는 몇 달 만에 합격하고, 누군가는 몇 년이 걸리기도 하지만, 그 시간이 길다고 해서 내 가능성이 없는 건 아니더라고요. 아직 준비하시는 분들의 타이밍이 오지 않았을 뿐일 수도 있습니다. 그러니 너무 조급해하지 말고 스스로를 믿으면서 끝까지 잘 이끌어 나가셨으면 좋겠습니다. 언젠가 지금의 시간도 분명 의미 있는 과정이었다고 느끼는 날이 올 거라고 믿습니다. 화이팅 하십시오 :)</div>
+      <div class="story">대면 면접 때는 특별히 꼬리질문이나 주목받는 순간은 없었지만, 하이어뷰(영상면접)는 현직 승무원과 HR 인사팀까지 2:1 구도로 진행돼서 조금 긴장했었대요. <br><br>그런데 현직 승무원분이 "긴장하지 말라고, 우린 널 평가하는 게 아니라 진짜 너란 사람이 어떤 사람인지 알아보려고 온 거니까 궁금한 게 있거나 모르는 게 있으면 언제든 편하게 말해달라"고 해주신 말이 인상 깊었다고 해요. 질문 자체는 크게 특별한 건 없이 질문-답변이 이어지는 방식에 한두 번 꼬리질문이 있는 정도였지만, 타 항공사와 다르게 "정말 나란 사람을 알아보려고 하는구나"라는 느낌을 받아서 정신적 부담을 많이 내려놓고 임할 수 있었다고 해요.</div>
+      <div class="tip"><span class="heart-label">🩷 팁</span> "Be yourself." 저도 승준생 땐 그 말을 들을 때마다 생각했어요. '나는 나대로 하고 있는 것 같은데... 나는 왜 안 되지?' 오히려 그 말이 너무 어렵게 느껴졌던 것 같아요. 정말 나는 나답게 하고 있는 걸까, 아니면 내가 나답다고 착각하고 있는 걸까. 그런 고민도 참 많이 했습니다. <br><br>저 또한 여기까지 오는데 정말 긴 시간이 걸렸고, 그 시간 동안 수없이 흔들렸고, 포기하고 싶은 순간도 너무 있었습니다. 그래도 한 가지는 말씀드리고 싶어요. 본인이 가는 방향이 맞다는 직감이 있다면, 너무 쉽게 포기하지 않았으면 좋겠습니다. <br><br>모든 사람에게는 각자의 타이밍이 있는 것 같아요. 누군가는 몇 달 만에 합격하고, 누군가는 몇 년이 걸리기도 하지만, 그 시간이 길다고 해서 내 가능성이 없는 건 아니더라고요. 아직 준비하시는 분들의 타이밍이 오지 않았을 뿐일 수도 있습니다. 그러니 너무 조급해하지 말고 스스로를 믿으면서 끝까지 잘 이끌어 나가셨으면 좋겠습니다. 언젠가 지금의 시간도 분명 의미 있는 과정이었다고 느끼는 날이 올 거라고 믿습니다. 화이팅 하십시오 :)</div>
       </div>
       <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
     </div>
@@ -483,7 +484,7 @@ h1 { font-family:'Jua',sans-serif; text-align:center; font-size:2.1rem; color:#6
       <div class="locked-content">
       <span class="name">하늘을 나는 감자</span> · <span class="meta">25.12.09 지원</span>
       <div class="timeline"><b>타임라인</b> 구글폼 지원(12/9) → 대면면접 일정 메일(12/11) → 대면면접(12/16)</div>
-      <div class="story">처음에 CV를 들고 줄을 서서 한 명씩 키·암리치를 측정하고 번호표를 받았대요. MC분이 지원자들 긴장을 풀어주려 유쾌한 분위기를 만들어주셨고, 면접관 3명 중 2:1 구도로 진행됐어요. MC가 호명하면 앞으로 나와 그 유명한 캣워크로 면접관 코앞까지 걸어가고, 팔 전체 흉터 체크(형식적인 수준)와 빅스마일을 보여주는 시간이 있었대요. 질문은 좋아하는 색·음식·숫자 등 가볍게 나왔고, 본인은 "왜 에어아시아엑스인지"를 받았다고 해요. 대기 중 옆 파티션에서 들린 2차 면접 질문은 — 기내에서 실수했을 때 대처, 한국에서 말레이시아로 꼭 가져가고 싶은 한 가지, 말레이시아에서 혼자 사는 것에 대한 생각 — 정도였대요.</div>
+      <div class="story">처음에 CV를 들고 줄을 서서 한 명씩 키·암리치를 측정하고 번호표를 받았대요. MC분이 지원자들 긴장을 풀어주려 유쾌한 분위기를 만들어주셨고, 면접관 3명 중 2:1 구도로 진행됐어요. <br><br>MC가 호명하면 앞으로 나와 그 유명한 캣워크로 면접관 코앞까지 걸어가고, 팔 전체 흉터 체크(형식적인 수준)와 빅스마일을 보여주는 시간이 있었대요. 질문은 좋아하는 색·음식·숫자 등 가볍게 나왔고, 본인은 "왜 에어아시아엑스인지"를 받았다고 해요. 대기 중 옆 파티션에서 들린 2차 면접 질문은 — 기내에서 실수했을 때 대처, 한국에서 말레이시아로 꼭 가져가고 싶은 한 가지, 말레이시아에서 혼자 사는 것에 대한 생각 — 정도였대요.</div>
       <div class="tip"><span class="heart-label">🩷 팁</span> 복장은 색 있는 옷, 모나미 정장 등 다양했고 크게 상관없는 듯해요. 회사(면접관)가 원하는 이미지가 있는 만큼 다양한 이미지의 지원자를 뽑는 것 같아요.</div>
       </div>
       <div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
