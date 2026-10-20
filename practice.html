@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>승무원 영어면접 연습</title>
-<meta name="description" content="항공사 승무원 영어면접 질문 은행과 답변 틀, 모범 답변, 핵심 표현 모음">
+<meta name="description" content="항공사 승무원 영어면접 질문 은행과 답변 틀, 핵심 표현 모음">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -93,18 +93,6 @@ ol.frame { margin:0; padding-left:1.3em; font-size:0.91rem; }
 ol.frame li { margin-bottom:5px; }
 ol.frame li::marker { color:var(--brand); font-weight:700; }
 
-.model { position:relative; background:var(--sky-deep); border-radius:14px; padding:14px 16px;
-  font-size:0.93rem; line-height:1.8; color:#1f3c57; }
-.model.hidden { min-height:76px; }
-.model.hidden .model-txt { filter:blur(5px); user-select:none; pointer-events:none; }
-.model-reveal { display:none; }
-.model.hidden .model-reveal { position:absolute; inset:0; display:flex; flex-direction:column;
-  align-items:center; justify-content:center; gap:7px; border-radius:14px; background:rgba(228,238,247,.82); }
-.model-reveal button { font:inherit; font-family:'Jua',sans-serif; font-size:0.98rem;
-  background:var(--brand); color:#fff; border:0; border-radius:999px; padding:9px 22px;
-  cursor:pointer; box-shadow:0 4px 12px rgba(79,134,184,.28); }
-.model-reveal span { font-size:0.82rem; color:#46637f; }
-.wc { font-size:0.8rem; color:var(--muted); margin-top:7px; text-align:right; }
 
 .ph { list-style:none; margin:0; padding:0; }
 .ph li { padding:9px 0; border-bottom:1px dashed var(--line); font-size:0.9rem; }
@@ -156,10 +144,48 @@ ol.frame li::marker { color:var(--brand); font-weight:700; }
 .case .case-d { flex:0 0 78px; font-size:0.78rem; color:var(--muted); line-height:1.5; padding-top:2px; }
 .case .case-t { font-weight:500; font-size:0.95rem; color:#1f3c57; }
 .case .case-x { font-size:0.83rem; color:var(--muted); margin-top:2px; }
-.story p { font-size:0.93rem; line-height:1.72; color:#44586d; margin:0 0 10px; }
-.story p:last-child { margin-bottom:0; }
-.story .said { padding:10px 14px; margin:12px 0; border-left:3px solid var(--brand);
-  background:rgba(109,154,196,.09); border-radius:0 10px 10px 0; color:#1f3c57; }
+
+/* ── 디스커션 유형 ── */
+.sec-sub { margin-top:26px; }
+.tcmp .tcmp-r { padding:13px 0; border-bottom:1px dashed var(--line); }
+.tcmp .tcmp-r:last-child { border-bottom:0; padding-bottom:0; }
+.tcmp .tcmp-h { font-family:'Jua',sans-serif; font-size:1.02rem; color:var(--brand-deep); }
+.tcmp .tcmp-a { display:inline-block; font-size:0.78rem; color:#fff; background:var(--brand);
+  border-radius:20px; padding:2px 10px; margin:5px 0 7px; }
+.tcmp .tcmp-d { font-size:0.9rem; line-height:1.72; color:#44586d; }
+.prio { display:flex; gap:11px; padding:12px 0; border-bottom:1px dashed var(--line); }
+.prio:last-of-type { border-bottom:0; }
+.prio .prio-n { flex:0 0 26px; height:26px; border-radius:50%; background:var(--brand); color:#fff;
+  font-size:0.82rem; display:flex; align-items:center; justify-content:center; margin-top:2px; }
+.prio .prio-t { font-weight:500; font-size:0.95rem; color:#1f3c57; }
+.prio .prio-d { font-size:0.86rem; color:var(--muted); line-height:1.65; margin-top:3px; }
+.prio .prio-en { font-size:0.88rem; color:var(--brand-deep); margin-top:6px;
+  padding-left:11px; border-left:2px solid var(--brand-mid); }
+.gap { background:rgba(224,134,157,.08); border-radius:12px; padding:13px 16px; margin-top:13px;
+  font-size:0.88rem; line-height:1.7; color:#7d4f5e; }
+.gap b { color:#a7415c; font-weight:500; }
+
+/* ── 예시 하나 ── */
+.ex { background:var(--card-bg); border-radius:18px; padding:20px 22px; margin:0 0 18px;
+  box-shadow:0 4px 14px rgba(46,90,130,.07); border-top:3px solid var(--brand-mid); }
+.ex h3 { font-family:'Jua',sans-serif; font-size:1.18rem; color:var(--brand-deep); margin:0 0 5px; }
+.ex .ex-sub { font-size:0.86rem; color:var(--muted); line-height:1.65; margin-bottom:14px; }
+.ex .ex-q { background:var(--lav); border-radius:12px; padding:11px 14px; margin-bottom:16px;
+  font-size:0.9rem; color:#1f3c57; }
+.ex .ex-q b { color:var(--brand-deep); font-weight:500; }
+.ex-step { padding:13px 0; border-bottom:1px dashed var(--line); }
+.ex-step:last-of-type { border-bottom:0; }
+.ex-step .ex-h { display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+.ex-step .ex-n { flex:0 0 auto; font-size:0.74rem; font-weight:500; color:#fff; background:var(--brand);
+  border-radius:20px; padding:2px 10px; letter-spacing:.02em; }
+.ex-step .ex-note { font-size:0.78rem; color:var(--muted); }
+.ex-step .ex-en { font-size:0.95rem; line-height:1.78; color:#1f3c57; }
+.ex-step .ex-ko { font-size:0.85rem; line-height:1.7; color:var(--muted); margin-top:6px; }
+.ex-len { margin-top:14px; padding-top:13px; border-top:1px solid var(--line);
+  font-size:0.84rem; color:var(--muted); }
+.ex-close { margin-top:14px; background:rgba(109,154,196,.09); border-radius:12px; padding:13px 16px;
+  font-size:0.89rem; line-height:1.72; color:#44586d; }
+.ex-close b { color:var(--brand-deep); font-weight:500; }
 
 /* ── 내 질문 추가 ── */
 .myq-box { background:var(--card-bg); border-radius:18px; padding:18px 20px; margin:18px 0 14px;
@@ -170,7 +196,9 @@ ol.frame li::marker { color:var(--brand); font-weight:700; }
 .myq-row select, .myq-row input {
   font-family:inherit; font-size:0.93rem; color:#1f3c57;
   border:1px solid var(--line); border-radius:12px; padding:11px 13px; background:#fff; outline:none; }
-.myq-row select { flex:0 0 132px; }
+.myq-row select { flex:1 1 132px; min-width:120px; }
+.myq-row.myq-row2 input { flex:1 1 100%; }
+.myq-row #myq-air-etc[hidden] { display:none; }
 .myq-row input { flex:1 1 180px; min-width:0; }
 .myq-row select:focus, .myq-row input:focus { border-color:var(--brand); }
 .myq-add { width:100%; font-family:'Jua',sans-serif; font-size:1rem; color:#fff;
@@ -276,15 +304,16 @@ table.avoid tr:last-child td { border-bottom:0; }
 <div class="wrap">
 
   <h1>승무원 영어면접 연습</h1>
-  <p class="sub">후기에서 모은 실제 질문 · 답변 틀 · 모범 답변</p>
+  <p class="sub">후기에서 모은 실제 질문 · 답변 틀 · 참고 답변</p>
 
   <div class="fact">
     <div class="fact-title">먼저 알아두면 좋은 것</div>
     <ul>
-      <li>해외 항공사가 쓰는 비동기 영상면접(하이어뷰 등)은 <b>얼굴 표정 분석을 중단했다고 발표했습니다</b> (2021년 1월 보도).</li>
-      <li>그 대신 채점에 쓰이는 건 <b>말한 내용의 전사본</b>이라고 알려져 있습니다. 발음이 완벽할 필요는 없고, 문장이 명확해야 합니다.</li>
-      <li>단, <b>국내 항공사 영상면접은 반대로 보는 쪽이 많습니다.</b> 국내에서 쓰이는 역량검사류는 답변 내용 대신 표정·음성을 본다고 설명하는 경우가 있어서, 해외 기준을 국내에 그대로 적용하면 안 됩니다. (여기까지는 제 개인적인 분석입니다)</li>
-      <li>그래서 연습할 것은 네 가지입니다 — <b>STAR 구조 / 제한 시간 / 구체적 경험 / 문장의 명료성</b>.</li>
+      <li>케세이퍼시픽·에티하드가 쓰는 <b>하이어뷰</b>는 2020년 3월에 얼굴 표정 분석을 중단하고 2021년 1월에 알렸습니다. 당시 대표가 한 말이 이거예요. <b>"We're primarily assessing the candidate's answer to the questions."</b> 답변을 받아적어서 <b>내용</b>을 본다는 뜻입니다.</li>
+      <li>리야드에어가 쓰는 <b>마키</b>도 같은 방향입니다. 자사 설명에 <b>"Delivery, pace, accent and speech patterns are not scored"</b> 라고 적혀 있어요. <b>억양과 말하는 속도는 점수에 안 들어갑니다.</b> 발음이 완벽할 필요는 없고 문장이 명확해야 합니다. 다만 어학 평가가 따로 있으면 거기서는 발음과 유창성을 봅니다.</li>
+      <li>단, <b>국내 항공사 영상면접은 반대입니다.</b> 국내에서 쓰이는 역량검사 개발사 기술 문서에는 시선·표정·음성을 측정한다고 되어 있고, <b>"답변(내용/의미) 분석은 지원하지 않는다"</b>고 명시돼 있어요. 해외 기준을 국내에 그대로 적용하면 안 됩니다. (어느 항공사가 어느 업체를 쓰는지에 대한 판단은 제 개인적인 분석입니다)</li>
+      <li>그래서 <b>막히거나 "어… 음…" 하고 멈추는 건 양쪽 다 불리합니다.</b> 국내 기술은 휴지를 측정 항목에 넣어뒀고, 하이어뷰도 말의 멈춤이 작은 요소로 남아 있습니다.</li>
+      <li>그래서 연습할 것은 네 가지입니다. <b>STAR 구조 / 제한 시간 / 구체적 경험 / 문장의 명료성</b>.</li>
     </ul>
   </div>
 
@@ -296,7 +325,7 @@ table.avoid tr:last-child td { border-bottom:0; }
       <span class="t-name">항공사별</span><span class="t-meta">5개사</span>
     </button>
     <button class="tab" role="tab" id="tab-disc" aria-controls="p-disc" aria-selected="false" data-p="disc">
-      <span class="t-name">디스커션</span><span class="t-meta">21주제</span>
+      <span class="t-name">디스커션</span><span class="t-meta">2유형</span>
     </button>
     <button class="tab" role="tab" id="tab-sjt" aria-controls="p-sjt" aria-selected="false" data-p="sjt">
       <span class="t-name">상황판단</span><span class="t-meta">4문제</span>
@@ -311,7 +340,49 @@ table.avoid tr:last-child td { border-bottom:0; }
 
   <section id="p-core" role="tabpanel" aria-labelledby="tab-core">
     <div class="sec-label">공통 질문 15</div>
-    <p class="hint">어느 항공사에서든 나오는 질문입니다. 답변 틀을 보고 <b>먼저 직접 써본 뒤</b> 모범 답변을 열어보세요.</p>
+    <p class="hint">어느 항공사에서든 나오는 질문입니다. 질문마다 모범 답변을 두지 않았어요. 아래 <b>예시 하나</b>로 쌓는 순서를 보시고, 내용은 본인 경험으로 채우시면 됩니다.</p>
+    <div class="ex">
+      <h3>답변을 어떻게 쌓는가 · 예시 하나</h3>
+      <p class="ex-sub">질문마다 답변을 달아두지 않았습니다. 무엇이 좋은 답인지는 면접관과 회차에 따라 달라지고, 저도 모르기 때문이에요.
+        대신 <b>쌓는 순서와 분량</b>이 어떤 모양인지 보여주는 예시를 하나만 둡니다. 제 경험입니다.</p>
+
+      <div class="ex-q">이런 질문에 쓸 수 있는 답입니다 ·
+        <b>Tell me about a time you noticed someone needed help before they asked.</b></div>
+
+      <div class="ex-step">
+        <div class="ex-h"><span class="ex-n">1 · 상황</span><span class="ex-note">한 줄로 끝냅니다</span></div>
+        <div class="ex-en">This actually happened during an interview. I was sitting across from the interviewer while she was writing on my assessment form.</div>
+        <div class="ex-ko">사실 면접장에서 있었던 일입니다. 면접관이 제 평가지에 뭔가를 적고 있었고, 저는 그 앞에 앉아 있었어요.</div>
+      </div>
+
+      <div class="ex-step">
+        <div class="ex-h"><span class="ex-n">2 · 문제</span><span class="ex-note">한 줄로 끝냅니다</span></div>
+        <div class="ex-en">She made a mistake and reached for her correction pen, but it had dried out. She tried it twice and it still would not write.</div>
+        <div class="ex-ko">뭔가를 잘못 적어서 화이트를 집으셨는데, 굳어서 안 나왔어요. 두 번을 더 해보셨는데도 안 나왔습니다.</div>
+      </div>
+
+      <div class="ex-step">
+        <div class="ex-h"><span class="ex-n">3 · 내가 한 행동</span><span class="ex-note">여기를 가장 길게</span></div>
+        <div class="ex-en">I waited a moment, because I did not want to cut in while she was still trying. Then I asked if she would like me to step outside and find one for her. I said I could be quick, and that I was happy to wait. She said yes, so I asked at the front desk and brought one back.</div>
+        <div class="ex-ko">바로 끼어들고 싶지 않아서 한 박자 기다렸습니다. 그리고 나가서 화이트를 찾아와도 괜찮을지 물었어요. 얼른 다녀오겠다고, 기다리는 건 괜찮다고 말씀드렸습니다. 그러라고 하셔서 안내 데스크에 물어보고 가져다 드렸습니다.</div>
+      </div>
+
+      <div class="ex-step">
+        <div class="ex-h"><span class="ex-n">4 · 그래서 어떻게 됐나</span><span class="ex-note">한두 줄</span></div>
+        <div class="ex-en">Her expression changed when I offered. It was a small thing, but she had been stuck for a few seconds and nobody had moved. That is when I understood what this job is: noticing before you are asked.</div>
+        <div class="ex-ko">제안을 드렸을 때 표정이 바뀌는 걸 봤습니다. 작은 일이지만, 몇 초 동안 막혀 있었는데 아무도 움직이지 않았어요. 이 일이 어떤 일인지 그때 알았습니다. 요청받기 전에 알아차리는 것이요.</div>
+      </div>
+
+      <div class="ex-len" id="ex-len"></div>
+
+      <div class="ex-close">
+        <b>질문이 달라져도 쌓는 순서는 같습니다.</b> 상황 한 줄, 문제 한 줄, 내가 한 행동을 가장 길게, 그래서 어떻게 됐는지.
+        3번이 제일 길어야 합니다. 면접관이 보려는 건 어떤 상황이었는지가 아니라 <b>그 상황에서 무엇을 했는지</b>예요.
+        <br><br>
+        이 일은 제가 네 번째 파이널 면접에서 실제로 한 행동이고, 답변으로 말한 게 아닙니다. 앞의 세 번은 다 떨어졌어요.
+        답변을 쌓는 순서가 똑같아서 예시로 가져왔습니다. 내용은 본인 경험으로 바꿔 쓰세요. 그대로 외우면 외운 티가 납니다.
+      </div>
+    </div>
     <div id="core-list"></div>
     <div id="my-q"></div>
   </section>
@@ -323,10 +394,28 @@ table.avoid tr:last-child td { border-bottom:0; }
   </section>
 
   <section id="p-disc" role="tabpanel" aria-labelledby="tab-disc" hidden>
-    <div class="sec-label">싱가포르항공 디스커션</div>
-    <p class="hint">싱가포르는 기내 상황이 아니라 <b>일상 찬반 토론</b>이 나옵니다. 주제 풀이 몇 년째 재사용되고 있어서, 미리 양쪽 논점을 잡아두면 실제로 통합니다.</p>
+    <div class="sec-label">그룹 디스커션</div>
+    <p class="hint">그룹 디스커션은 항공사에 따라 <b>형식이 완전히 다릅니다.</b> 준비 방법도 달라서 두 유형으로 나눠 정리했어요. 내가 보는 항공사가 어느 쪽인지 먼저 확인하세요.</p>
+
+    <article class="cbox tcmp">
+      <div class="tcmp-r">
+        <div class="tcmp-h">유형 1 · 일상 찬반형</div>
+        <div class="tcmp-a">싱가포르항공</div>
+        <div class="tcmp-d">기내와 무관한 일상 주제로 찬반을 나눕니다. <b>주제 풀이 재사용되므로</b> 미리 양쪽 논점을 잡아두는 게 그대로 통합니다.</div>
+      </div>
+      <div class="tcmp-r">
+        <div class="tcmp-h">유형 2 · 기내 상황 과제형</div>
+        <div class="tcmp-a">카타르 · 에미레이트 · 에티하드</div>
+        <div class="tcmp-d">기내 상황을 주고 조가 <b>하나의 결론에 도달하게</b> 합니다. 주제를 외워서 갈 수 없어요. 대신 판단 기준을 가지고 가면 어떤 과제든 같은 순서로 말할 수 있습니다.</div>
+      </div>
+    </article>
+
+    <div class="sec-label sec-sub">유형 1 · 일상 찬반형 — 싱가포르항공</div>
     <div id="disc-top"></div>
     <div id="disc-list"></div>
+
+    <div class="sec-label sec-sub">유형 2 · 기내 상황 과제형 — 카타르 · 에미레이트 · 에티하드</div>
+    <div id="disc-task"></div>
   </section>
 
   <section id="p-sjt" role="tabpanel" aria-labelledby="tab-sjt" hidden>
@@ -354,20 +443,12 @@ table.avoid tr:last-child td { border-bottom:0; }
         <div class="mrule-t">아래 항목들은 전부 여기서 나옵니다</div>
         <div class="mrule-d">경청하는 자세도, 안 볼 때의 태도도 따로 외울 규칙이 아니에요. "같이 일하고 싶은 사람으로 보이는가" 하나를 두고 보면 뭘 해야 할지가 대체로 정해집니다.</div>
       </div>
-    </article>
-
-    <article class="cbox">
-      <h3>화이트가 안 나왔을 때</h3>
-      <div class="cbox-sub">제 얘기를 하나 하겠습니다. 위에 적은 게 무슨 말인지 설명하기에 이만한 게 없어서요.</div>
-      <div class="story">
-        <p>저는 파이널에서만 세 번 떨어졌어요. 네 번째에 붙었는데, 그날 기억나는 건 제가 한 답변이 아닙니다.</p>
-        <p>면접관이 뭘 적다가 틀려서 화이트로 지우려고 하셨는데, 그게 안 나오더라고요. 잠깐 보다가 제가 그랬습니다.</p>
-        <div class="said">나가서 화이트 있는지 물어보고 올까요? 잠시만 기다려주세요, 얼른 물어보고 올게요.</div>
-        <p>그때 면접관 표정이 확 바뀌는 걸 제가 봤어요. 그게 합격 이유였는지는 알 수 없습니다. 다만 그 장면만 아직도 선명해요.</p>
-        <p>준비한 답이 아니었습니다. 그냥 곤란해 보이니까 몸이 먼저 움직인 거예요. 질문에 답하는 시간도 아니었고, 평가 항목에도 없었을 겁니다.</p>
-        <p>그런데 기내에서 하는 일이 결국 그거잖아요. 매뉴얼에 없는 상황에서 누가 먼저 움직이는가. 면접관이 보고 싶은 것도 아마 그거일 테고요.</p>
+      <div class="mrule">
+        <div class="mrule-t">예시는 공통 질문 탭 맨 위에 있습니다</div>
+        <div class="mrule-d">답변을 쌓는 순서를 보여주려고 제가 파이널에서 겪은 일을 하나 적어뒀어요. 여기서 말하는 태도가 어떤 건지도 같이 보이실 겁니다.</div>
       </div>
     </article>
+
 
     <article class="cbox">
       <h3>경청하는 자세</h3>
@@ -386,7 +467,7 @@ table.avoid tr:last-child td { border-bottom:0; }
       </div>
       <div class="mrule">
         <div class="mrule-t">다른 사람 이름을 기억했다가 쓰세요</div>
-        <div class="mrule-d">자기소개 때 이름을 적어두고, 발언할 때 "As Mina mentioned…" 처럼 붙이면 들었다는 게 증명됩니다. 이게 경청을 보여주는 가장 확실한 방법이에요.</div>
+        <div class="mrule-d">자기소개 때 이름을 적어두고, 발언할 때 "As ___ mentioned…" 처럼 그 사람 이름을 넣어 붙이면 들었다는 게 증명됩니다. 이게 경청을 보여주는 가장 확실한 방법이에요.</div>
       </div>
       <div class="mrule">
         <div class="mrule-t">끼어들지 말고, 끝난 뒤 반 박자 두세요</div>
@@ -394,7 +475,7 @@ table.avoid tr:last-child td { border-bottom:0; }
       </div>
       <div class="mrule">
         <div class="mrule-t">조용한 사람에게 한 번 넘겨주세요</div>
-        <div class="mrule-d">"We haven't heard from you yet — what do you think?" 한 마디가 혼자 말을 많이 하는 것보다 크게 작용하는 경우가 있습니다. 승무원 일 자체가 팀 안에서 하는 일이라서요.</div>
+        <div class="mrule-d">"We haven't heard from you yet, what do you think?" 한 마디가 혼자 말을 많이 하는 것보다 크게 작용하는 경우가 있습니다. 승무원 일 자체가 팀 안에서 하는 일이라서요.</div>
       </div>
     </article>
 
@@ -404,15 +485,15 @@ table.avoid tr:last-child td { border-bottom:0; }
       <div class="pgrp">
         <div class="pgrp-t">상대 말을 받아서 잇기</div>
         <ul class="ph">
-          <li><div class="ph-en">Building on what Mina said, I'd add that…</div><div class="ph-ko">미나 님 말씀에 이어서, 저는 이것도 있다고 봅니다</div></li>
+          <li><div class="ph-en">Building on what ___ said, I'd add that…</div><div class="ph-ko">앞서 말씀하신 분 의견에 이어서, 저는 이것도 있다고 봅니다 (빈칸에 그분 이름)</div></li>
           <li><div class="ph-en">That's a good point. In my experience…</div><div class="ph-ko">좋은 지적이에요. 제 경험으로는…</div></li>
-          <li><div class="ph-en">I agree with Sarah, especially about the time issue.</div><div class="ph-ko">사라 님 의견에 동의해요. 특히 시간 문제 쪽이요</div></li>
+          <li><div class="ph-en">I agree with ___, especially about the time issue.</div><div class="ph-ko">~님 의견에 동의해요. 특히 시간 문제 쪽이요</div></li>
         </ul>
       </div>
       <div class="pgrp">
         <div class="pgrp-t">부드럽게 다른 의견 내기</div>
         <ul class="ph">
-          <li><div class="ph-en">I see it a little differently — could I share another angle?</div><div class="ph-ko">저는 좀 다르게 보는데, 다른 관점 하나 말씀드려도 될까요</div></li>
+          <li><div class="ph-en">I see it a little differently. Could I share another angle?</div><div class="ph-ko">저는 좀 다르게 보는데, 다른 관점 하나 말씀드려도 될까요</div></li>
           <li><div class="ph-en">That makes sense for short flights. For long-haul, though…</div><div class="ph-ko">단거리에서는 맞는 말씀이에요. 다만 장거리에서는…</div></li>
         </ul>
       </div>
@@ -420,7 +501,7 @@ table.avoid tr:last-child td { border-bottom:0; }
         <div class="pgrp-t">되묻기와 넘기기</div>
         <ul class="ph">
           <li><div class="ph-en">Could you say a bit more about that?</div><div class="ph-ko">그 부분 조금만 더 말씀해 주실 수 있을까요</div></li>
-          <li><div class="ph-en">We haven't heard from you yet — what do you think?</div><div class="ph-ko">아직 말씀 안 하셨는데, 어떻게 생각하세요</div></li>
+          <li><div class="ph-en">We haven't heard from you yet, what do you think?</div><div class="ph-ko">아직 말씀 안 하셨는데, 어떻게 생각하세요</div></li>
           <li><div class="ph-en">So we're saying… is that right?</div><div class="ph-ko">정리하면 이런 얘기인 거죠, 맞나요</div></li>
         </ul>
       </div>
@@ -465,7 +546,7 @@ table.avoid tr:last-child td { border-bottom:0; }
   <div class="disclaim">
     여기 정리된 질문과 전형 구조는 <b>지원자 후기와 커뮤니티 자료를 바탕으로 정리한 것</b>이며, 항공사가 공개한 공식 자료가 아닙니다.
     회차·지역에 따라 다를 수 있고, 여기 없는 질문도 나올 수 있습니다. 실제 전형은 받으신 안내 메일을 기준으로 해주세요.<br>
-    모범 답변은 <b>구조를 보여주기 위한 예시</b>입니다. 그대로 외우면 외운 티가 납니다. 틀만 가져가고 내용은 본인 경험으로 바꿔 쓰세요.
+    질문마다 모범 답변을 붙이지 않았습니다. <b>무엇이 좋은 답인지는 면접관과 회차에 따라 달라지고, 저도 모르기 때문이에요.</b> 대신 쌓는 순서와 분량이 어떤 모양인지 보여주는 <b>예시를 하나만</b> 뒀습니다. 공통 질문 탭 맨 위에 있어요.
   </div>
 
   <div class="footer">
@@ -488,9 +569,8 @@ const CORE = [
     "지금 무엇을 하는 사람인지 한 문장",
     "그 경험에서 승무원 일과 연결되는 것 딱 두 가지",
     "그중 하나를 증명하는 짧은 사례 하나",
-    "그래서 이 일을 하고 싶다 — 한 문장으로 마무리"
+    "그래서 이 일을 하고 싶다. 한 문장으로 마무리"
   ],
-  model:"My name is Jiyoung Kim, and I'm from Seoul. For the past three years I've worked at a hotel front desk, checking in around eighty guests a day, many of them from overseas. That job taught me two things I think matter most in this role. First, service is mostly about noticing — a guest who looks exhausted needs a different kind of attention than one who is excited to be there. Second, staying calm is a skill, not a personality. When our booking system went down during a full house, I handled the entire queue by hand and apologised to every guest individually, and we finished check-in with no complaints. Outside work I travel whenever I can — nine countries so far, usually alone, which has made me comfortable around people who do things differently from me. I'd like to bring all of that onto an aircraft.",
   phrases:[
     {en:"For the past three years I've worked at…", ko:"지난 3년간 ~에서 일했습니다"},
     {en:"That job taught me two things that matter in this role.", ko:"그 일에서 이 직무에 중요한 두 가지를 배웠습니다"},
@@ -510,7 +590,6 @@ const CORE = [
     "지금 일에는 없는데 승무원 일에는 있는 것",
     "'여행' 말고 다른 이유로 닫기"
   ],
-  model:"I want a job where the quality of my attention actually changes someone's day, and where I have to think on my feet. I found both at the hotel I work at — but only on the ground. Last winter a guest arrived at midnight having lost her luggage, and the twenty minutes I spent finding her toiletries and something to sleep in mattered more to her than anything else we did that week. That is the part of service I want more of. Cabin crew work adds what my current job doesn't have: a small team that has to be completely self-sufficient for twelve hours, and a safety responsibility I would have to be trained and trusted with. I'm not applying because I want to travel. I'm applying for that combination.",
   phrases:[
     {en:"I want a job where my attention changes someone's day.", ko:"내 주의력이 누군가의 하루를 바꾸는 일을 하고 싶습니다"},
     {en:"I have to think on my feet.", ko:"즉석에서 판단해야 합니다"},
@@ -530,14 +609,13 @@ const CORE = [
     "베이스 도시에서 살 수 있다는 근거",
     "다른 항공사에는 못 쓰는 문장으로 닫기"
   ],
-  model:"Three reasons, and I'll start with the specific one. Emirates runs a single-hub model — almost everything goes through Dubai — so crew get mixed differently on every roster, and you work alongside more than a hundred nationalities rather than four or five. I want that, because the part of my current job I'm best at is reading people I've never met before. Second, the fleet. A380 and 777 widebody operations mean long-haul cabins and large crew complements, so the teamwork is structured rather than improvised. Third, Dubai itself — I've visited twice and I could live there, which matters, because this is a relocation and not just a job. I'd rather tell you I checked that before applying than find out afterwards.",
   phrases:[
     {en:"I'll start with the specific one.", ko:"구체적인 이유부터 말씀드리겠습니다"},
     {en:"a single-hub model", ko:"단일 허브 구조"},
     {en:"large crew complements", ko:"많은 승무원 편성"},
     {en:"this is a relocation, not just a job", ko:"이건 단순한 취업이 아니라 이주입니다"}
   ],
-  tip:"어느 항공사에도 붙일 수 있는 답이면 사실상 0점입니다. 허브 구조 · 보유 기종 · 베이스 도시 — 이 셋 중 최소 하나는 그 항공사만의 사실이어야 합니다. 지원 전에 홈페이지 About / Fleet 페이지는 꼭 보세요."
+  tip:"어느 항공사에도 붙일 수 있는 답이면 사실상 0점입니다. 허브 구조 · 보유 기종 · 베이스 도시. 이 셋 중 최소 하나는 그 항공사만의 사실이어야 합니다. 지원 전에 홈페이지 About / Fleet 페이지는 꼭 보세요."
 },
 {
   id:"c04",
@@ -550,14 +628,13 @@ const CORE = [
     "A 내가 한 행동 3단계 (분리 → 경청 → 보상/설명)",
     "R 손님이 어떻게 돌아갔는지 + 숫자나 증거"
   ],
-  model:"At the hotel front desk, a guest came down at seven in the morning furious that his room had been double-booked and he'd been moved at one a.m. He raised his voice in a lobby with fifteen other guests checking out. My task was to fix it without the rest of the lobby becoming an audience. First I asked him to come with me to the side desk, which removed the audience. Then I did not explain or defend anything — I let him finish, and repeated back what had happened so he knew I had it right. Then I upgraded his two remaining nights, comped breakfast, and told him plainly that the error was our system's, not his. He checked out calmly, and he left a five-star review that mentioned me by name.",
   phrases:[
     {en:"My task was to fix it without the lobby becoming an audience.", ko:"로비가 구경거리가 되지 않게 해결하는 것이 제 과제였습니다"},
     {en:"I let him finish.", ko:"끝까지 말하게 했습니다"},
     {en:"I repeated back what had happened so he knew I had it right.", ko:"제대로 이해했음을 알도록 상황을 되짚어 말했습니다"},
     {en:"I told him plainly that the error was ours, not his.", ko:"잘못은 손님이 아니라 저희 쪽이라고 분명히 말했습니다"}
   ],
-  tip:"'화난 손님을 진정시켰다'로 끝내지 마세요. 결과(R)가 빠진 답이 비동기 영상면접에서 가장 흔한 감점 패턴입니다. 리뷰 별점, 재방문, 상사의 피드백 — 뭐든 증거를 하나 붙이세요."
+  tip:"'화난 손님을 진정시켰다'로 끝내지 마세요. 결과(R)가 빠진 답이 비동기 영상면접에서 가장 흔한 감점 패턴입니다. 리뷰 별점, 재방문, 상사의 피드백 등 뭐든 증거를 하나 붙이세요."
 },
 {
   id:"c05",
@@ -570,7 +647,6 @@ const CORE = [
     "A '우리가'가 아니라 '내가' 한 행동",
     "R 팀 성과 + 내 기여가 드러나는 지점"
   ],
-  model:"Our hotel hosted a 300-person conference and the catering team was two people short on the morning of day one. There were six of us on the front desk, and the plan was that three of us would cover breakfast service while three held the desk. I volunteered for the floor, but before we split I suggested we agree on one thing: whoever was on the desk would text the floor group the moment a session ended, so we knew when 300 people were about to arrive at once. That one rule meant we were never caught standing still. We served every break on time for three days, and the conference organiser rebooked for the following year.",
   phrases:[
     {en:"the plan was that three of us would cover…", ko:"셋이 ~를 맡는 것으로 계획이 잡혔습니다"},
     {en:"before we split I suggested we agree on one thing", ko:"흩어지기 전에 한 가지를 정하자고 제안했습니다"},
@@ -590,7 +666,6 @@ const CORE = [
     "A 직접 대화 → 상대 입장 확인 → 규칙 합의",
     "R 관계가 어떻게 됐는지 + 재발 여부"
   ],
-  model:"A colleague on the evening shift kept leaving the handover notes unfinished, so my morning shift started with guesswork twice in one week. I was annoyed, but I assumed there was a reason before I assumed he was careless. I asked him over coffee, not in front of the team, and it turned out he was being pulled to the restaurant at the end of every shift and simply ran out of time. So the problem wasn't him. We agreed he would write the notes at the start of his last hour instead of the end, and I would call him if anything was missing rather than escalating it. It never happened again, and he later asked me to swap shifts with him when he needed a weekend — which told me the relationship was fine.",
   phrases:[
     {en:"I assumed there was a reason before I assumed he was careless.", ko:"부주의하다고 단정하기 전에 이유가 있을 거라고 생각했습니다"},
     {en:"I asked him over coffee, not in front of the team.", ko:"팀 앞이 아니라 따로 커피 마시며 물었습니다"},
@@ -610,9 +685,8 @@ const CORE = [
     "A 구체적으로 뭘 했는지",
     "R 그 결과 + 내 일은 어떻게 처리했는지"
   ],
-  model:"A new colleague was on her second week when a Chinese tour group of forty arrived early without a rooming list. She froze — understandably. I had my own queue, but a queue of three can wait and a group of forty cannot. I took the group myself and gave her my queue, because checking in three individuals was something she could already do well. While I worked through the group I said each step out loud so she could hear the order of it. We cleared the lobby in about twenty-five minutes. The useful part was afterwards: the next time a group came in, she took it, and she did it without me.",
   phrases:[
-    {en:"She froze — understandably.", ko:"그 친구가 얼어버렸습니다 — 당연한 일이었죠"},
+    {en:"She froze, understandably.", ko:"그 친구가 얼어버렸습니다. 당연한 일이었죠"},
     {en:"a queue of three can wait and a group of forty cannot", ko:"3명 줄은 기다릴 수 있지만 40명 단체는 기다릴 수 없습니다"},
     {en:"I said each step out loud so she could hear the order of it.", ko:"순서를 들을 수 있도록 각 단계를 소리내어 말했습니다"},
     {en:"the next time, she took it without me", ko:"다음 번엔 저 없이 그 친구가 맡았습니다"}
@@ -630,7 +704,6 @@ const CORE = [
     "A 보고 → 복구 → 사과 순서",
     "R 그 이후 내가 바꾼 것"
   ],
-  model:"I once gave a guest the wrong airport transfer time — I read the next day's schedule by mistake. She came to the desk at the time I'd told her, and the car had already gone. I did not try to soften it. I told her immediately that the error was mine, booked a private car at the hotel's cost, and told my manager before the guest could, because a complaint my manager hears from me first is a different conversation. She made her flight. Afterwards I started reading the booking date back to the guest out loud every time — \"so that's Thursday the twelfth, six in the morning\" — which takes three seconds and makes that mistake almost impossible.",
   phrases:[
     {en:"I did not try to soften it.", ko:"축소해서 말하지 않았습니다"},
     {en:"I told my manager before the guest could.", ko:"손님이 말하기 전에 제가 매니저에게 먼저 보고했습니다"},
@@ -649,7 +722,6 @@ const CORE = [
     "일 끝난 뒤의 회복 방법 (일하는 중과 구분)",
     "회복이 실제로 작동한다는 근거"
   ],
-  model:"I separate the two. In the moment, I narrow down — I pick the one thing that has to be true in the next five minutes and I do only that. During a fire alarm at the hotel we had to clear nine floors, and the one thing was knowing which rooms were occupied, so I printed the list before anything else and that's what we worked from. Afterwards is different. I swim twice a week, and I don't check my phone for the first hour after a shift, because I've learned that the day follows me home if I let it. That's the part people skip, and it's the part that decides whether you're still calm in month six.",
   phrases:[
     {en:"I separate the two.", ko:"저는 둘을 분리합니다"},
     {en:"I pick the one thing that has to be true in the next five minutes.", ko:"앞으로 5분 안에 반드시 되어 있어야 할 한 가지를 고릅니다"},
@@ -665,13 +737,12 @@ const CORE = [
   sees:"서비스 기준 · 관찰력 (내가 어떤 승무원이 될지 드러남)",
   frame:[
     "상황 (짧게)",
-    "그 사람이 한 행동 — 아주 구체적으로",
+    "그 사람이 한 행동, 아주 구체적으로",
     "왜 그게 좋았는지, 핵심 한 가지",
     "내가 그걸 어떻게 재현할지"
   ],
-  model:"On a flight to Frankfurt I was sitting next to a mother travelling alone with a toddler who had been crying for most of the first hour. A crew member came by, but she didn't talk to the child — she talked to the mother. She said, quietly, \"he's fine, nobody minds,\" and then she brought a cup of tea and took the tray away so the mother had both hands free. What made it excellent wasn't the tea. It was that she identified who in that row actually needed help. The child needed sleep; the mother needed permission to stop apologising. I think about that one a lot, because noticing the right person costs nothing and most people get it wrong.",
   phrases:[
-    {en:"she didn't talk to the child — she talked to the mother", ko:"아이가 아니라 엄마에게 말을 걸었습니다"},
+    {en:"she didn't talk to the child, she talked to the mother", ko:"아이가 아니라 엄마에게 말을 걸었습니다"},
     {en:"she identified who in that row actually needed help", ko:"그 열에서 실제로 도움이 필요한 사람을 알아봤습니다"},
     {en:"the mother needed permission to stop apologising", ko:"엄마에게 필요한 건 사과를 멈춰도 된다는 허락이었습니다"},
     {en:"noticing the right person costs nothing", ko:"맞는 사람을 알아보는 데는 비용이 들지 않습니다"}
@@ -689,7 +760,6 @@ const CORE = [
     "셋 중 하나는 반드시 안전 또는 규정 준수",
     "셋이 충돌할 때의 우선순위 한 문장"
   ],
-  model:"Safety, honesty, and consistency. Safety first, and I mean it literally — in this job the service only matters if the aircraft is secure, so a rule I find inconvenient is still a rule I follow. Honesty second: if I don't know something, saying so takes five seconds and guessing can take the whole flight to undo. Consistency third — the passenger in the last row on the twelfth hour should get the same version of me as the first passenger on the first hour, and that's harder than it sounds, which is why I count it. If they ever conflict, safety wins and I don't have to think about it.",
   phrases:[
     {en:"a rule I find inconvenient is still a rule I follow", ko:"불편한 규정도 지켜야 할 규정입니다"},
     {en:"guessing can take the whole flight to undo", ko:"추측은 비행 내내 수습해야 할 일이 됩니다"},
@@ -705,11 +775,10 @@ const CORE = [
   sees:"자기 인식 · 위계가 뚜렷한 조직에 맞는가",
   frame:[
     "둘 다라고 말하되 '상황에 따라'로 끝내지 말 것",
-    "언제 리드하는지 — 조건을 구체적으로",
-    "언제 따르는지 — 특히 안전·위계 상황",
+    "언제 리드하는지, 조건을 구체적으로",
+    "언제 따르는지, 특히 안전·위계 상황",
     "둘 다 할 수 있었던 사례 하나"
   ],
-  model:"Both, and the thing that decides it is who has the information. I lead when nobody has started — at the hotel, when the conference catering was short-staffed, nobody had made a plan yet, so I made one. I follow completely when someone is trained for the situation and I'm not, and in this job that would be most of the time: a senior crew member or the purser has flown the route and knows the aircraft, so my job is to execute precisely and ask questions before, not during. I'd rather be the person who follows well and speaks up early than someone who needs to be in charge to be useful.",
   phrases:[
     {en:"the thing that decides it is who has the information", ko:"무엇이 결정하느냐면, 정보를 가진 사람이 누구냐입니다"},
     {en:"I lead when nobody has started.", ko:"아무도 시작하지 않았을 때 제가 끌고 갑니다"},
@@ -729,7 +798,6 @@ const CORE = [
     "A 이유 설명 → 선택지 제시 → 물러서지 않음",
     "R 어떻게 끝났는지"
   ],
-  model:"A guest tried to bring his dog into our breakfast room, which we don't allow because of a guest with a severe allergy staying that week. He'd done it at other hotels and he was not happy. I didn't start with the rule, I started with the reason — I told him there was a guest in the building who would have to leave the room if the dog came in. Then I gave him two options rather than a no: breakfast on the terrace, where dogs are fine, or room service at no extra charge. He took the terrace. The part I'd keep is the order: reason first, then options, and the rule itself never had to be the argument.",
   phrases:[
     {en:"I didn't start with the rule, I started with the reason.", ko:"규정이 아니라 이유부터 말했습니다"},
     {en:"I gave him two options rather than a no.", ko:"'안 된다' 대신 선택지 두 개를 드렸습니다"},
@@ -748,7 +816,6 @@ const CORE = [
     "A 처음에 서툴렀던 지점 + 그걸 메운 방법",
     "R 결과 + 지금 남아 있는 것"
   ],
-  model:"Last year I started learning Mandarin, because about a third of our guests were Chinese-speaking and I was handing every one of them to a colleague. I'm not naturally good at languages, and the first three months were genuinely bad. What worked was narrowing it — instead of studying the language, I learned the forty sentences I actually needed at a front desk, and I practised them on real guests even when my pronunciation was poor. Guests were far kinder about it than I expected. Within six months I could handle a full check-in in Mandarin. I'd still call myself a beginner, but I stopped being the person who had to pass the guest along.",
   phrases:[
     {en:"the first three months were genuinely bad", ko:"처음 3개월은 정말 형편없었습니다"},
     {en:"What worked was narrowing it.", ko:"효과가 있었던 건 범위를 좁힌 것이었습니다"},
@@ -765,9 +832,8 @@ const CORE = [
   frame:[
     "앞에서 말 못한 사실 하나 (새 정보여야 함)",
     "이 회사에 대한 구체적 코멘트 하나",
-    "20초 안에 끝내기 — 길면 역효과"
+    "20초 안에 끝내기, 길면 역효과"
   ],
-  model:"One thing I didn't get to mention. I've already lived abroad once, in Osaka for a year, and the part that was hard wasn't the work — it was month four, when the novelty wore off and I was still far from home. I got through it, and I'd rather you know I've tested that than find out I hadn't. Other than that, thank you for today — the assessment was tougher and better organised than I expected, and that made me more interested in working here, not less.",
   phrases:[
     {en:"One thing I didn't get to mention.", ko:"앞에서 말씀드리지 못한 게 하나 있습니다"},
     {en:"the novelty wore off", ko:"신기함이 사라졌을 때"},
@@ -783,7 +849,8 @@ const AIRLINES = [
   flag:"\u{1F1E6}\u{1F1EA}",
   base:"두바이",
   format:[
-    "온라인 지원 → (회차에 따라) 영상면접 → 대면 어세스먼트 → 파이널 인터뷰",
+    "온라인 지원 또는 오픈데이 참석 → 대면 어세스먼트 → 파이널 인터뷰",
+    "AI 영상면접은 없습니다. 파이널을 온라인으로 보는 회차는 있습니다",
     "파이널은 1:1 또는 2:1, 영어로 진행",
     "그룹 디스커션이 포함되는 회차가 있습니다"
   ],
@@ -791,8 +858,8 @@ const AIRLINES = [
   qs:["c01","c02","c03","c04","c05","c06","c07","c09","c10","c11","c12","c15"],
   extra:[
     "Tell me about a time you helped someone at school.",
-    "그룹 디스커션 — 탑승 전 승객 6명이 동시에 요청할 때 우선순위 정하기",
-    "그룹 디스커션 — 승무원에게 가장 중요한 자질은 무엇인가"
+    "그룹 디스커션, 탑승 전 승객 6명이 동시에 요청할 때 우선순위 정하기",
+    "그룹 디스커션, 승무원에게 가장 중요한 자질은 무엇인가"
   ]
 },
 {
@@ -800,14 +867,15 @@ const AIRLINES = [
   flag:"\u{1F1E6}\u{1F1EA}",
   base:"아부다비",
   format:[
-    "영상면접(비동기) 질문 4개 · 각 1분 내외",
-    "전체 소요 1시간 이상 — 시간 여유를 두고 시작하세요",
-    "이후 프리셀렉션 / 대면 어세스먼트"
+    "온라인 지원 → (회차에 따라) AI 영상면접 → 어세스먼트",
+    "어세스먼트는 버추얼 또는 대면 중 하나입니다. 둘 다 보는 게 아니라 회차에 따라 갈립니다",
+    "AI 영상면접은 있는 회차도 있고 없는 회차도 있습니다. 있으면 질문 4개 · 각 1분 내외",
+    "전체 소요 1시간 이상, 시간 여유를 두고 시작하세요"
   ],
   note:"4문항이 비교적 고정적으로 보고됩니다. 아래 네 개를 각각 1분 분량(약 130~150단어)으로 맞춰 외우지 않고 '말할 수 있게' 만드는 게 목표입니다.",
   qs:["c13","c04","c14","c05"],
   extra:[
-    "How do you build relationships with people in a team? — 5번 답변의 '팀 안에서 내가 한 행동'을 그대로 쓰면 됩니다",
+    "How do you build relationships with people in a team?, 5번 답변의 '팀 안에서 내가 한 행동'을 그대로 쓰면 됩니다",
     "4문항 모두 경험 질문이라, 서로 다른 경험 네 개를 미리 정해두세요. 같은 일화를 두 번 쓰면 눈에 띕니다"
   ]
 },
@@ -816,15 +884,19 @@ const AIRLINES = [
   flag:"\u{1F1F8}\u{1F1E6}",
   base:"리야드",
   format:[
+    "온라인 지원 → AI 영상면접 → 대면 면접",
+    "AI 영상면접은 세 부분으로 나뉩니다",
     "1부 · 상황판단 8문제 (4지선다, 랜덤 출제)",
-    "2부 · 2분 영상 자기소개 (질문 3개 중 랜덤 1개)",
+    "2부 · 2분 영상 자기소개 (질문 3개 중 랜덤 1개, 그중 하나가 “Tell us why you are the perfect candidate for Riyadh Air”)",
     "3부 · 듣기 10문제"
   ],
   note:"전체화면이 강제로 켜져서 메모장을 볼 수 없다는 후기가 많습니다. 시작 전에 알림을 모두 끄고, 자기소개는 2분 안에 끝나도록 미리 시간을 재보세요.",
   qs:["c01","c02","c03"],
   extra:[
+    "“Tell us why you are the perfect candidate for Riyadh Air?”, 2부에서 확인된 질문입니다. 자기소개가 아니라 '왜 나여야 하는가'를 묻는 거라 답의 모양이 다릅니다. 강점 두 개를 고르고 각각에 증거 한 줄씩, 마지막에 리야드에어와 연결하세요. 강점을 세 개 이상 늘어놓으면 2분 안에 증거를 못 붙입니다",
+    "리야드에어는 2023년에 생긴 신생 항공사입니다. '왜 리야드에어인가'에 “from the beginning”, “build something new” 같은 방향이 자연스럽게 맞습니다. 역사나 명성을 칭찬하는 답은 이 항공사에 잘 안 붙어요",
     "상황판단 4문제는 아래 '상황 판단' 탭에서 풀어보세요",
-    "2분 자기소개 — 1분 30초~1분 50초에 끝나게 맞추는 게 안전합니다"
+    "2분 자기소개, 1분 30초~1분 50초에 끝나게 맞추는 게 안전합니다"
   ]
 },
 {
@@ -832,15 +904,15 @@ const AIRLINES = [
   flag:"\u{1F1F6}\u{1F1E6}",
   base:"도하",
   format:[
-    "지원 → 상태 변화(CC New MBR External) → 사진 요청 → 하이어뷰 → 인비",
-    "대면: CV Drop → 영어테스트 · 센텐스 슈팅 → 파이널",
-    "회차·지역에 따라 CV Drop 없이 바로 그룹 디스커션으로 가는 경우도 보고됩니다"
+    "온라인 지원 → 영어테스트 → 그룹 디스커션 → 파이널",
+    "지원 후 상태 변화(CC New MBR External)와 사진 요청, 하이어뷰를 거쳐 인비가 오는 회차가 있습니다",
+    "대면 당일에 CV Drop이 먼저 있는 회차도 있고, 없이 바로 그룹 디스커션으로 가는 회차도 보고됩니다"
   ],
   note:"영어테스트는 25문제로 보고된 회차가 있습니다. 센텐스 슈팅은 주어진 단어나 문장으로 즉석에서 문장을 만드는 형식이라, 완벽한 문장보다 '막히지 않고 바로 나오는 것'이 중요합니다.",
   qs:["c01","c04","c11","c13","c10"],
   extra:[
-    "센텐스 슈팅 — 주어진 단어로 즉석 문장 만들기 (아래 '표현' 탭의 즉답 연습 참고)",
-    "그룹 디스커션 — 기내 상황에서의 우선순위 토론"
+    "센텐스 슈팅, 주어진 단어로 즉석 문장 만들기 (아래 '표현' 탭의 즉답 연습 참고)",
+    "그룹 디스커션, 기내 상황에서의 우선순위 토론"
   ]
 },
 {
@@ -855,9 +927,9 @@ const AIRLINES = [
   note:"대면 1차가 디스커션입니다. 기내 상황이 아니라 'Money can buy happiness' 같은 일상 찬반 주제가 나오고, 후기 세 건이 모두 답변 내용보다 태도와 이미지를 본다고 했습니다. 주제 21개와 양쪽 논점은 '디스커션' 탭에 정리해뒀어요.",
   qs:["c01","c02","c03","c05","c12"],
   extra:[
-    "대면 1차 디스커션 — '디스커션' 탭에 2026년 서울 실제 출제 주제 3건과 기출 풀 21개가 있습니다",
+    "대면 1차 디스커션, '디스커션' 탭에 2026년 서울 실제 출제 주제 3건과 기출 풀 21개가 있습니다",
     "파이널은 외운 답변을 길게 말하기보다 짧게 주고받는 티키타카를 선호한다는 합격자 후기가 있습니다",
-    "케바야 피팅에서 금니·리테이너·피부까지 확인한다는 후기 — 면접 전에 미리 준비하세요"
+    "케바야 피팅에서 금니·리테이너·피부까지 확인한다는 후기, 면접 전에 미리 준비하세요"
   ]
 }
 ];
@@ -905,7 +977,7 @@ const SJT = [
   ],
   best:0,
   why:[
-    "가장 적절합니다. 사람의 성향을 고치려 하지 않고 '업무 중 소통 방식'이라는 좁은 합의만 만드는 것이 현실적입니다. 시점도 중요합니다 — 바쁜 구간에 하지 않습니다.",
+    "가장 적절합니다. 사람의 성향을 고치려 하지 않고 '업무 중 소통 방식'이라는 좁은 합의만 만드는 것이 현실적입니다. 시점도 중요합니다, 바쁜 구간에 하지 않습니다.",
     "방향은 맞지만 시점과 장소가 잘못됐습니다. 승객 앞·바쁜 구간에서의 지적은 팀 분위기를 더 망칩니다.",
     "먼저 시도할 것을 건너뛴 선택입니다. 조 변경은 자체 해결이 안 될 때의 수단입니다.",
     "업무에 영향이 나타난 상태라면 방치는 선택지가 아닙니다."
@@ -931,23 +1003,23 @@ const SJT = [
 
 const PHRASES = {
   star:[
-    {label:"Situation — 상황 열기", items:[
+    {label:"Situation · 상황 열기", items:[
       {en:"This happened when I was working at…", ko:"~에서 일할 때 있었던 일입니다"},
       {en:"At the time I was responsible for…", ko:"당시 저는 ~를 담당하고 있었습니다"},
       {en:"It was the busiest hour of the day, and…", ko:"하루 중 가장 바쁜 시간이었는데…"}
     ]},
-    {label:"Task — 내 과제 선언", items:[
+    {label:"Task · 내 과제 선언", items:[
       {en:"My task was to…", ko:"제가 해야 했던 일은 ~였습니다"},
       {en:"What I had to do was… without…", ko:"~하지 않으면서 ~해야 했습니다"},
       {en:"The problem I needed to solve was…", ko:"제가 풀어야 했던 문제는 ~였습니다"}
     ]},
-    {label:"Action — 행동 (가장 길게)", items:[
+    {label:"Action · 행동 (가장 길게)", items:[
       {en:"First I…, then I…, and finally I…", ko:"먼저 ~하고, 그다음 ~하고, 마지막으로 ~했습니다"},
       {en:"Rather than…, I decided to…", ko:"~하는 대신 ~하기로 했습니다"},
       {en:"I made sure to… before…", ko:"~하기 전에 반드시 ~했습니다"},
-      {en:"I didn't… — instead I…", ko:"~하지 않았습니다. 대신 ~했습니다"}
+      {en:"I didn't…, instead I…", ko:"~하지 않았습니다. 대신 ~했습니다"}
     ]},
-    {label:"Result — 결과 (절대 빼지 말 것)", items:[
+    {label:"Result · 결과 (절대 빼지 말 것)", items:[
       {en:"As a result, …", ko:"그 결과 ~"},
       {en:"She later…, which told me…", ko:"나중에 그분이 ~했고, 그걸로 ~를 알 수 있었습니다"},
       {en:"It never happened again.", ko:"그 일은 다시 일어나지 않았습니다"},
@@ -955,9 +1027,9 @@ const PHRASES = {
     ]}
   ],
   fillers:[
-    {en:"That's a good question — let me give you a specific example.", ko:"좋은 질문입니다. 구체적인 예를 들어 말씀드리겠습니다"},
+    {en:"That's a good question, let me give you a specific example.", ko:"좋은 질문입니다. 구체적인 예를 들어 말씀드리겠습니다"},
     {en:"Can I take a second to think about that?", ko:"잠시 생각해도 될까요?"},
-    {en:"There are two parts to that — let me start with the first.", ko:"두 부분이 있는데, 첫 번째부터 말씀드리겠습니다"},
+    {en:"There are two parts to that, let me start with the first.", ko:"두 부분이 있는데, 첫 번째부터 말씀드리겠습니다"},
     {en:"To put it simply, …", ko:"간단히 말하면 ~"},
     {en:"Sorry, could you repeat the question?", ko:"죄송합니다, 질문을 한 번 더 말씀해주실 수 있을까요?"}
   ],
@@ -965,51 +1037,51 @@ const PHRASES = {
     {bad:"I'm a people person.", good:"I'm good at reading people I've never met before.", why:"상투적이고 증거가 없습니다. 무엇을 잘하는지 구체적으로 바꾸세요."},
     {bad:"I want to travel the world.", good:"I want a job where I'm part of a team that has to be self-sufficient for twelve hours.", why:"가장 흔한 지원 동기이고 직무 이해도가 없어 보입니다."},
     {bad:"I always do my best.", good:"I printed the occupancy list before anything else, because that was the one thing we needed.", why:"태도 선언은 점수가 없습니다. 행동 하나로 바꾸세요."},
-    {bad:"I have no weaknesses.", good:"I used to take on too much before asking for help — now I flag it at the halfway point.", why:"자기 인식이 없어 보입니다. 약점 + 고친 방법 조합이 안전합니다."},
-    {bad:"The customer is always right.", good:"The customer always deserves to be heard — but safety rules don't move.", why:"안전이 걸린 직무에서는 위험한 문장입니다."},
+    {bad:"I have no weaknesses.", good:"I used to take on too much before asking for help, now I flag it at the halfway point.", why:"자기 인식이 없어 보입니다. 약점 + 고친 방법 조합이 안전합니다."},
+    {bad:"The customer is always right.", good:"The customer always deserves to be heard, but safety rules don't move.", why:"안전이 걸린 직무에서는 위험한 문장입니다."},
     {bad:"I'm a perfectionist.", good:"I double-check dates out loud, because I once got one wrong.", why:"너무 많이 쓰여서 아무 의미가 없습니다."}
   ],
   service:[
     {en:"Of course, I'll take care of that right away.", ko:"물론입니다, 바로 처리해드리겠습니다"},
-    {en:"I'm so sorry about that — let me fix it for you.", ko:"정말 죄송합니다. 바로 해결해드리겠습니다"},
+    {en:"I'm so sorry about that, let me fix it for you.", ko:"정말 죄송합니다. 바로 해결해드리겠습니다"},
     {en:"Would you prefer A or B?", ko:"A가 나으실까요, B가 나으실까요?"},
     {en:"I'm afraid I can't do that, but what I can do is…", ko:"그건 어렵습니다만, 제가 해드릴 수 있는 것은 ~입니다"},
     {en:"Let me check with the purser and come straight back to you.", ko:"사무장에게 확인하고 바로 다시 오겠습니다"},
-    {en:"Thank you for letting me know — I'll pass that on.", ko:"알려주셔서 감사합니다. 전달하겠습니다"},
+    {en:"Thank you for letting me know, I'll pass that on.", ko:"알려주셔서 감사합니다. 전달하겠습니다"},
     {en:"For your safety, I'll need to ask you to…", ko:"안전을 위해 ~해주시기를 부탁드립니다"},
     {en:"Take your time, there's no rush.", ko:"천천히 하셔도 됩니다, 급하지 않습니다"}
   ],
   cushion:[
-    {label:"거절할 때 — 바로 No 라고 하지 않습니다", items:[
+    {label:"거절할 때, 바로 No 라고 하지 않습니다", items:[
       {en:"I'm afraid that's not something I can do, but…", ko:"그건 제가 해드리기 어렵습니다만…"},
       {en:"Unfortunately that seat has already been taken.", ko:"아쉽게도 그 좌석은 이미 배정되었습니다"},
       {en:"I wish I could, but for safety reasons I'm not able to.", ko:"해드리고 싶지만 안전상 어렵습니다"},
       {en:"That's not available on this flight, I'm sorry.", ko:"이 편에서는 제공되지 않습니다, 죄송합니다"}
     ]},
-    {label:"거절 뒤에는 반드시 대안 — 이게 핵심입니다", items:[
+    {label:"거절 뒤에는 반드시 대안. 이게 핵심입니다", items:[
       {en:"What I can do is…", ko:"대신 제가 해드릴 수 있는 것은 ~입니다"},
       {en:"Let me see what I can arrange for you.", ko:"가능한 방법이 있는지 알아보겠습니다"},
       {en:"May I suggest…?", ko:"~는 어떠실까요?"},
       {en:"I'll check with the purser and come straight back to you.", ko:"사무장에게 확인하고 바로 다시 오겠습니다"}
     ]},
-    {label:"부탁할 때 — 명령이 아니라 질문으로", items:[
+    {label:"부탁할 때, 명령이 아니라 질문으로", items:[
       {en:"Would you mind…?", ko:"~해주실 수 있을까요?"},
       {en:"Could I ask you to…?", ko:"~를 부탁드려도 될까요?"},
       {en:"When you have a moment, could you…?", ko:"괜찮으실 때 ~해주시겠어요?"},
       {en:"May I just…?", ko:"잠시 ~해도 될까요?"}
     ]},
-    {label:"기다리게 할 때 — 빈손으로 돌아서지 않습니다", items:[
+    {label:"기다리게 할 때, 빈손으로 돌아서지 않습니다", items:[
       {en:"Bear with me for just a moment.", ko:"잠시만 기다려주시겠어요"},
       {en:"I'll be right back with you.", ko:"바로 다시 오겠습니다"},
-      {en:"It may take a few minutes — I'll let you know as soon as I have an answer.", ko:"몇 분 걸릴 수 있습니다. 확인되는 대로 알려드리겠습니다"}
+      {en:"It may take a few minutes, I'll let you know as soon as I have an answer.", ko:"몇 분 걸릴 수 있습니다. 확인되는 대로 알려드리겠습니다"}
     ]},
-    {label:"사과할 때 — 변명보다 짧게", items:[
+    {label:"사과할 때, 변명보다 짧게", items:[
       {en:"I'm so sorry about that.", ko:"정말 죄송합니다"},
       {en:"I do apologise for the inconvenience.", ko:"불편을 드려 사과드립니다"},
-      {en:"That shouldn't have happened — thank you for telling me.", ko:"그런 일이 있어선 안 됐습니다. 말씀해주셔서 감사합니다"}
+      {en:"That shouldn't have happened, thank you for telling me.", ko:"그런 일이 있어선 안 됐습니다. 말씀해주셔서 감사합니다"}
     ]},
     {label:"되묻고 확인할 때", items:[
-      {en:"Just to make sure I understood — you'd like…?", ko:"제가 잘 이해했는지 확인하자면, ~를 원하시는 거죠?"},
+      {en:"Just to make sure I understood, you'd like…?", ko:"제가 잘 이해했는지 확인하자면, ~를 원하시는 거죠?"},
       {en:"Sorry, do you mean…?", ko:"죄송합니다, ~라는 말씀이실까요?"},
       {en:"Let me repeat that back to you.", ko:"제가 다시 한번 말씀드려보겠습니다"}
     ]}
@@ -1029,14 +1101,60 @@ const PHRASES = {
 
 /* ── 싱가포르항공 디스커션 ── */
 
+/* ── 유형 2 · 기내 상황 과제형 ── */
+const TASK = {
+  diff:[
+    { t:"이기는 자리가 아니라 결론을 내는 자리입니다",
+      d:"찬반형은 내 입장을 세우면 되지만, 과제형은 조가 하나의 답에 도달해야 합니다. 시간 안에 결론이 안 나오면 조 전체가 같이 손해예요. 그래서 상대를 꺾는 발언은 여기서 가장 위험합니다." },
+    { t:"주제를 외워서 갈 수 없습니다",
+      d:"찬반형은 주제 풀이 재사용되지만 과제형은 상황이 매번 새로 만들어집니다. 외울 대상이 주제가 아니라 <b>판단 기준</b>이에요. 기준이 있으면 처음 보는 과제에도 같은 순서로 말할 수 있습니다." },
+    { t:"기준을 먼저 깔면 그 자리를 가져갑니다",
+      d:"대부분이 바로 항목 순서를 말하기 시작합니다. 그 전에 “무엇을 기준으로 정할지 먼저 합의할까요”를 꺼내면 조를 이끄는 사람이 됩니다. 발언을 많이 하는 것보다 이 한 번이 크게 작용합니다." }
+  ],
+  prio:[
+    { t:"안전과 규정", d:"양보할 수 없는 항목입니다. 여기에 걸리면 승객이 아무리 원해도 안 됩니다. 과제에 안전 요소가 섞여 있으면 그게 1번이라는 걸 먼저 말해주세요.",
+      en:"Can we agree that anything involving safety or regulations comes first?" },
+    { t:"다른 승객에게 미치는 영향", d:"한 명을 만족시키려다 여럿이 불편해지는 선택인지 봅니다. 기내는 닫힌 공간이라 한 사람에게 한 일이 전부에게 보입니다.",
+      en:"This one affects everyone in the cabin, so I'd put it above the individual requests." },
+    { t:"요청한 승객의 만족", d:"위 두 개에 걸리지 않으면 해드립니다. 여기서 중요한 건 안 되는 걸 안 된다고만 하지 않고 대안을 같이 내는 것이에요.",
+      en:"If we cannot do exactly that, what can we offer instead?" },
+    { t:"효율", d:"같은 결과라면 빠른 쪽입니다. 다만 효율을 1번으로 말하면 승객보다 편의를 앞세우는 사람으로 보입니다. 마지막에 두세요.",
+      en:"Both options work, so I would go with the one that takes less time." }
+  ],
+  seen:[
+    { air:"에미레이트", t:"탑승 전 승객 6명이 동시에 요청할 때 우선순위 정하기" },
+    { air:"에미레이트", t:"승무원에게 가장 중요한 자질은 무엇인가" },
+    { air:"카타르항공", t:"기내 상황에서의 우선순위 토론 (세부 주제 미확인)" },
+    { air:"에티하드", t:"그룹 디스커션 포함은 확인, 주제는 확인된 것이 없습니다" }
+  ],
+  ph:[
+    { group:"기준 먼저 깔기 (가장 먼저 쓰세요)", items:[
+      { en:"Before we rank them, shall we agree on what we're ranking by?", ko:"순서를 정하기 전에, 무엇을 기준으로 할지 먼저 합의할까요?" },
+      { en:"I think safety has to come first, does everyone agree?", ko:"안전이 1번이어야 할 것 같은데, 다들 동의하시나요?" }
+    ]},
+    { group:"제안에 근거 붙이기", items:[
+      { en:"I'd put this first, because it affects everyone on board.", ko:"이걸 1번에 두겠습니다. 기내 전체에 영향을 주니까요" },
+      { en:"This one can wait, it only affects one passenger and nothing is at risk.", ko:"이건 뒤로 가도 됩니다. 한 분에게만 해당되고 위험한 것도 없어서요" }
+    ]},
+    { group:"합의로 끌고 가기 (점수가 큽니다)", items:[
+      { en:"It sounds like we agree on the top two. Shall we settle the rest?", ko:"상위 두 개는 의견이 모인 것 같네요. 남은 걸 정해볼까요?" },
+      { en:"We haven't heard from you yet, would you put it in the same order?", ko:"아직 말씀 안 하셨는데, 같은 순서로 보시나요?" }
+    ]},
+    { group:"시간 관리", items:[
+      { en:"We have a few minutes left, shall we lock in our top three?", ko:"몇 분 남았는데, 상위 세 개를 확정할까요?" },
+      { en:"We're split on this one, shall we come back to it at the end?", ko:"이건 의견이 갈리네요. 마지막에 다시 볼까요?" }
+    ]}
+  ]
+};
+
 const DISC_META = {
   confirmed:[
     { date:"2026. 4. 25 · 서울", topic:"Money can buy happiness",
-      detail:"6명 · 면접관 남1 여1 · 이야기 나눈 뒤 한 명씩 돌아가며 발표 · 조에서 2명 합격", who:"부리또" },
+      detail:"6명 · 면접관 남1 여1 · 이야기 나눈 뒤 한 명씩 돌아가며 발표 · 조에서 2명 합격" },
     { date:"2026. 4. 26 · 서울", topic:"Being oldest is better than youngest",
-      detail:"면접관 여1 남1 · 이 분은 최종 합격", who:"비행" },
+      detail:"면접관 여1 남1 · 이 분은 최종 합격" },
     { date:"2026. 7. 11 · 서울", topic:"Junk food is good or bad",
-      detail:"답변 내용보다 이미지를 보는 느낌이었다는 후기", who:"싱가고싶다" }
+      detail:"답변 내용보다 이미지를 보는 느낌이었다는 후기" }
   ],
   manner:[
     { t:"이기려 들지 마세요", d:"“디베이트라기보다는 이야기 나누고 한 명씩 돌아가며 발표”하는 자리였다는 후기가 있습니다. 상대를 꺾으면 그 자리에서 끝납니다." },
@@ -1048,18 +1166,18 @@ const DISC_META = {
   ],
   connect:[
     { group:"받아서 잇기 (가장 많이 쓰세요)", items:[
-      { en:"I agree with Minji, and I'd add that…", ko:"민지님 의견에 동의하고, 덧붙이자면 ~" },
-      { en:"That's a good point — building on that,…", ko:"좋은 지적이에요. 거기에 이어서 말하면 ~" },
-      { en:"Picking up on what Sujin said,…", ko:"수진님이 말씀하신 걸 이어받자면 ~" }
+      { en:"I agree with ___, and I'd add that…", ko:"~님 의견에 동의하고, 덧붙이자면 (빈칸에 그분 이름)" },
+      { en:"That's a good point, building on that,…", ko:"좋은 지적이에요. 거기에 이어서 말하면 ~" },
+      { en:"Picking up on what ___ said,…", ko:"~님이 말씀하신 걸 이어받자면 (빈칸에 그분 이름)" }
     ]},
     { group:"부드럽게 다른 의견", items:[
-      { en:"I see it slightly differently — for me,…", ko:"저는 조금 다르게 봅니다. 제 생각에는 ~" },
+      { en:"I see it slightly differently, for me,…", ko:"저는 조금 다르게 봅니다. 제 생각에는 ~" },
       { en:"I take your point, though I'd argue…", ko:"무슨 말씀인지 알겠습니다. 다만 저는 ~라고 봅니다" },
       { en:"That's true in most cases, but what about…?", ko:"대체로 맞습니다. 그런데 ~인 경우는 어떨까요?" }
     ]},
     { group:"차례 넘기기 (점수가 큽니다)", items:[
-      { en:"What do you think, Jiwon?", ko:"지원님은 어떻게 생각하세요?" },
-      { en:"I've said a lot — I'd like to hear from someone who hasn't spoken yet.", ko:"제가 말을 많이 했네요. 아직 말씀 안 하신 분 의견도 듣고 싶습니다" },
+      { en:"What do you think, ___?", ko:"~님은 어떻게 생각하세요? (빈칸에 그분 이름)" },
+      { en:"I've said a lot, I'd like to hear from someone who hasn't spoken yet.", ko:"제가 말을 많이 했네요. 아직 말씀 안 하신 분 의견도 듣고 싶습니다" },
       { en:"Does anyone see it differently?", ko:"다르게 보시는 분 계신가요?" }
     ]},
     { group:"정리하며 닫기", items:[
@@ -1074,12 +1192,12 @@ const DISC = [
 { id:"d01", type:"debate", seen:"2026. 4. 25 서울 확인",
   q:"Can money buy happiness?", ko:"돈으로 행복을 살 수 있는가",
   pro:[
-    {en:"Money removes the specific worries that make people unhappy — rent, medical bills, caring for a parent.", ko:"돈은 사람을 불행하게 만드는 구체적인 걱정을 없애줍니다 — 월세, 병원비, 부모님 간병 같은 것들요"},
+    {en:"Money removes the specific worries that make people unhappy, rent, medical bills, caring for a parent.", ko:"돈은 사람을 불행하게 만드는 구체적인 걱정을 없애줍니다, 월세, 병원비, 부모님 간병 같은 것들요"},
     {en:"It buys time, and time is what lets you be with the people you love.", ko:"돈은 시간을 사줍니다. 그 시간이 사랑하는 사람과 함께 있게 해줍니다"}
   ],
   con:[
     {en:"Past a certain income, the gain in day-to-day happiness flattens out.", ko:"일정 소득을 넘으면 일상적 행복의 증가는 완만해집니다"},
-    {en:"The things people name at the end of their lives — relationships, meaning — are not for sale.", ko:"사람들이 인생의 끝에서 꼽는 것들 — 관계, 의미 — 은 살 수 없습니다"}
+    {en:"The things people name at the end of their lives, relationships, meaning, are not for sale.", ko:"사람들이 인생의 끝에서 꼽는 것들, 관계, 의미, 은 살 수 없습니다"}
   ]},
 
 { id:"d02", type:"debate", seen:"2026. 4. 26 서울 확인",
@@ -1094,10 +1212,10 @@ const DISC = [
   ]},
 
 { id:"d03", type:"debate", seen:"2026. 7. 11 서울 확인",
-  q:"Junk food — is it good or bad?", ko:"정크푸드는 좋은가 나쁜가",
+  q:"Junk food, is it good or bad?", ko:"정크푸드는 좋은가 나쁜가",
   pro:[
     {en:"It's cheap and fast, and for people working long shifts it is sometimes the only realistic option.", ko:"싸고 빠릅니다. 교대 근무를 하는 사람에게는 그게 유일한 현실적 선택일 때가 있습니다"},
-    {en:"Banning things rarely works — teaching moderation does, and shared food has real social value.", ko:"금지는 거의 효과가 없고 절제를 가르치는 게 통합니다. 함께 먹는 음식에는 사회적 가치도 있고요"}
+    {en:"Banning things rarely works, teaching moderation does, and shared food has real social value.", ko:"금지는 거의 효과가 없고 절제를 가르치는 게 통합니다. 함께 먹는 음식에는 사회적 가치도 있고요"}
   ],
   con:[
     {en:"It is engineered to override the signal that tells you to stop eating.", ko:"그만 먹으라는 신호를 무력화하도록 설계돼 있습니다"},
@@ -1107,22 +1225,22 @@ const DISC = [
 { id:"d04", type:"debate",
   q:"Is intelligence more important than beauty?", ko:"지성이 외모보다 중요한가",
   pro:[
-    {en:"Intelligence compounds — what you learn this year makes next year easier. Looks do the opposite over time.", ko:"지성은 쌓입니다. 올해 배운 것이 내년을 쉽게 만들죠. 외모는 시간이 갈수록 반대입니다"},
+    {en:"Intelligence compounds, what you learn this year makes next year easier. Looks do the opposite over time.", ko:"지성은 쌓입니다. 올해 배운 것이 내년을 쉽게 만들죠. 외모는 시간이 갈수록 반대입니다"},
     {en:"In any job that involves judgement, people eventually trust what you decide, not how you look.", ko:"판단이 필요한 일에서는 결국 사람들이 외모가 아니라 결정을 신뢰합니다"}
   ],
   con:[
-    {en:"Appearance decides whether you get the first thirty seconds — and sometimes that's all you're given.", ko:"외모는 첫 30초를 얻느냐를 결정하고, 때로는 그게 주어진 전부입니다"},
+    {en:"Appearance decides whether you get the first thirty seconds, and sometimes that's all you're given.", ko:"외모는 첫 30초를 얻느냐를 결정하고, 때로는 그게 주어진 전부입니다"},
     {en:"In service work, looking well-groomed is part of doing the job properly, not vanity.", ko:"서비스직에서 단정한 외모는 허영이 아니라 업무의 일부입니다"}
   ]},
 
 { id:"d05", type:"debate",
   q:"Which is more important, EQ or IQ?", ko:"EQ와 IQ 중 무엇이 더 중요한가",
   pro:[
-    {en:"EQ — most problems at work are not technical, they are two people who stopped talking.", ko:"EQ입니다. 직장 문제의 대부분은 기술적인 게 아니라 두 사람이 대화를 멈춘 것입니다"},
+    {en:"EQ, most problems at work are not technical, they are two people who stopped talking.", ko:"EQ입니다. 직장 문제의 대부분은 기술적인 게 아니라 두 사람이 대화를 멈춘 것입니다"},
     {en:"You can teach someone a procedure in a week. You cannot teach them to read a room in a week.", ko:"절차는 일주일이면 가르칩니다. 분위기를 읽는 건 일주일로 안 됩니다"}
   ],
   con:[
-    {en:"IQ — in a safety role, you have to understand the system correctly before empathy matters.", ko:"IQ입니다. 안전이 걸린 일에서는 공감보다 시스템을 정확히 이해하는 게 먼저입니다"},
+    {en:"IQ, in a safety role, you have to understand the system correctly before empathy matters.", ko:"IQ입니다. 안전이 걸린 일에서는 공감보다 시스템을 정확히 이해하는 게 먼저입니다"},
     {en:"Warmth without competence is comforting but useless in an emergency.", ko:"능력 없는 따뜻함은 위안은 되지만 비상 상황에서는 쓸모가 없습니다"}
   ],
   tip:"승무원 면접이라 EQ 쪽으로 몰리기 쉽습니다. “둘 다 필요하지만 상황에 따라 순서가 다르다”로 가면 더 성숙하게 들립니다."},
@@ -1131,7 +1249,7 @@ const DISC = [
   q:"Is image important when you meet people?", ko:"사람을 만날 때 이미지가 중요한가",
   pro:[
     {en:"Image is the first information you give someone, and you only get to give it once.", ko:"이미지는 상대에게 주는 첫 정보이고, 그건 한 번만 줄 수 있습니다"},
-    {en:"Dressing appropriately is a form of respect — it says you took the meeting seriously.", ko:"상황에 맞게 입는 건 존중의 표현입니다. 이 자리를 진지하게 여겼다는 뜻이니까요"}
+    {en:"Dressing appropriately is a form of respect, it says you took the meeting seriously.", ko:"상황에 맞게 입는 건 존중의 표현입니다. 이 자리를 진지하게 여겼다는 뜻이니까요"}
   ],
   con:[
     {en:"First impressions are often wrong, and good judgement means being willing to revise them.", ko:"첫인상은 자주 틀리고, 좋은 판단력은 그걸 기꺼이 수정하는 것입니다"},
@@ -1153,18 +1271,18 @@ const DISC = [
 { id:"d08", type:"debate",
   q:"Is the mobile phone a good invention?", ko:"휴대폰은 좋은 발명품인가",
   pro:[
-    {en:"It put a translator, a map and an emergency line in everyone's pocket — that is genuinely new in human history.", ko:"번역기와 지도와 비상 연락망을 모두의 주머니에 넣었습니다. 인류 역사에서 정말 새로운 일입니다"},
+    {en:"It put a translator, a map and an emergency line in everyone's pocket, that is genuinely new in human history.", ko:"번역기와 지도와 비상 연락망을 모두의 주머니에 넣었습니다. 인류 역사에서 정말 새로운 일입니다"},
     {en:"It let people who live far from family stay part of each other's daily lives.", ko:"가족과 멀리 사는 사람들이 서로의 일상에 남아 있게 해줬습니다"}
   ],
   con:[
-    {en:"It has made attention the scarcest thing we have — people are present in the room but not in the conversation.", ko:"주의력을 가장 희소한 자원으로 만들었습니다. 사람들이 방에는 있지만 대화에는 없습니다"},
+    {en:"It has made attention the scarcest thing we have, people are present in the room but not in the conversation.", ko:"주의력을 가장 희소한 자원으로 만들었습니다. 사람들이 방에는 있지만 대화에는 없습니다"},
     {en:"The invention isn't the problem; the design that keeps you scrolling is.", ko:"발명 자체가 문제가 아니라, 계속 스크롤하게 만드는 설계가 문제입니다"}
   ]},
 
 { id:"d09", type:"debate",
   q:"Does social media help people connect, or create a divide?", ko:"SNS는 사람을 연결하는가, 갈라놓는가",
   pro:[
-    {en:"It connects people who would never have met — someone with a rare illness can find others like them in a day.", ko:"만날 일 없던 사람들을 연결합니다. 희귀병 환자가 하루 만에 같은 처지의 사람을 찾을 수 있죠"},
+    {en:"It connects people who would never have met, someone with a rare illness can find others like them in a day.", ko:"만날 일 없던 사람들을 연결합니다. 희귀병 환자가 하루 만에 같은 처지의 사람을 찾을 수 있죠"},
     {en:"For people far from home, it's the cheapest way to stay in someone's daily life.", ko:"고향에서 멀리 사는 사람에게는 누군가의 일상에 남는 가장 저렴한 방법입니다"}
   ],
   con:[
@@ -1191,14 +1309,14 @@ const DISC = [
   ],
   con:[
     {en:"Very young children need one consistent adult, and daycare staff change.", ko:"아주 어린아이에게는 일관된 한 명의 어른이 필요한데, 어린이집 교사는 바뀝니다"},
-    {en:"Quality varies enormously, and most families can't choose freely — they take what's available.", ko:"질의 편차가 크고, 대부분의 가정은 자유롭게 고르지 못하고 자리가 있는 곳에 보냅니다"}
+    {en:"Quality varies enormously, and most families can't choose freely, they take what's available.", ko:"질의 편차가 크고, 대부분의 가정은 자유롭게 고르지 못하고 자리가 있는 곳에 보냅니다"}
   ],
   tip:"“어느 쪽이 옳다”보다 “선택지가 있느냐가 진짜 문제”로 틀을 옮기면 누구도 불편하지 않으면서 생각이 있어 보입니다."},
 
 { id:"d12", type:"debate",
   q:"What ethical guidelines should govern organ transplantation?", ko:"장기 이식에 어떤 윤리 기준이 필요한가",
   pro:[
-    {en:"Allocation should follow medical need and likely outcome — never ability to pay or social status.", ko:"배분은 의학적 필요와 예후를 따라야 하고, 지불 능력이나 사회적 지위를 따라서는 안 됩니다"},
+    {en:"Allocation should follow medical need and likely outcome, never ability to pay or social status.", ko:"배분은 의학적 필요와 예후를 따라야 하고, 지불 능력이나 사회적 지위를 따라서는 안 됩니다"},
     {en:"Consent must be genuine, which means donors need information and time, not pressure.", ko:"동의는 진짜여야 하고, 그건 기증자에게 정보와 시간이 주어진다는 뜻입니다"}
   ],
   con:[
@@ -1210,7 +1328,7 @@ const DISC = [
 { id:"d13", type:"open",
   q:"How can we change gender roles in today's society?", ko:"오늘날 성역할을 어떻게 바꿀 수 있을까",
   angles:[
-    {en:"Change happens at work before it happens at home — shared parental leave shifts what families treat as normal.", ko:"변화는 가정보다 직장에서 먼저 일어납니다. 부모 모두의 육아휴직이 가정의 기준을 바꿉니다"},
+    {en:"Change happens at work before it happens at home, shared parental leave shifts what families treat as normal.", ko:"변화는 가정보다 직장에서 먼저 일어납니다. 부모 모두의 육아휴직이 가정의 기준을 바꿉니다"},
     {en:"Children copy what they see, so a father doing ordinary housework teaches more than any lesson.", ko:"아이는 본 것을 따라합니다. 아버지가 평범하게 집안일을 하는 게 어떤 교육보다 큽니다"},
     {en:"The goal isn't to reverse roles but to make them a choice rather than an assignment.", ko:"역할을 뒤집는 게 목표가 아니라, 주어지는 것이 아니라 고르는 것으로 만드는 게 목표입니다"}
   ],
@@ -1219,16 +1337,16 @@ const DISC = [
 { id:"d14", type:"open",
   q:"What factors contribute to job satisfaction besides salary?", ko:"급여 말고 직업 만족에 영향을 주는 요소",
   angles:[
-    {en:"Knowing your work actually reached someone — most people can take a hard day if they saw it matter.", ko:"내 일이 실제로 누군가에게 닿았다는 걸 아는 것. 힘든 날도 그게 보이면 견딥니다"},
+    {en:"Knowing your work actually reached someone, most people can take a hard day if they saw it matter.", ko:"내 일이 실제로 누군가에게 닿았다는 걸 아는 것. 힘든 날도 그게 보이면 견딥니다"},
     {en:"A manager who gives clear feedback, because uncertainty is more exhausting than workload.", ko:"분명한 피드백을 주는 상사. 불확실함이 업무량보다 사람을 지치게 하니까요"},
     {en:"Control over your own schedule, even a small amount of it.", ko:"내 일정에 대한 통제권. 아주 작은 정도라도요"}
   ],
-  tip:"승무원 직무와 연결하면 좋습니다 — “그래서 기내에서 승객 한 명의 하루가 달라지는 걸 직접 보는 일에 끌렸습니다”"},
+  tip:"승무원 직무와 연결하면 좋습니다, “그래서 기내에서 승객 한 명의 하루가 달라지는 걸 직접 보는 일에 끌렸습니다”"},
 
 { id:"d15", type:"open",
   q:"Which is the most memorable country you've visited?", ko:"가장 기억에 남는 나라",
   angles:[
-    {en:"Pick one specific moment, not the whole trip — one scene is more memorable than a list of cities.", ko:"여행 전체가 아니라 한 장면을 고르세요. 도시 나열보다 한 장면이 훨씬 기억에 남습니다"},
+    {en:"Pick one specific moment, not the whole trip, one scene is more memorable than a list of cities.", ko:"여행 전체가 아니라 한 장면을 고르세요. 도시 나열보다 한 장면이 훨씬 기억에 남습니다"},
     {en:"Say what it changed in you, in one sentence.", ko:"그게 나를 어떻게 바꿨는지 한 문장으로 말하세요"},
     {en:"If possible, choose somewhere that shows you're comfortable with unfamiliar cultures.", ko:"가능하면 낯선 문화에 편안하다는 걸 보여주는 곳을 고르세요"}
   ],
@@ -1237,7 +1355,7 @@ const DISC = [
 { id:"d16", type:"open",
   q:"What are some must-visit places for tourists in Korea?", ko:"한국에서 외국인이 꼭 가봐야 할 곳",
   angles:[
-    {en:"Name one famous place and one that locals actually go to — that contrast shows you know the country, not the guidebook.", ko:"유명한 곳 하나와 현지인이 실제로 가는 곳 하나. 그 대비가 가이드북이 아니라 나라를 안다는 걸 보여줍니다"},
+    {en:"Name one famous place and one that locals actually go to, that contrast shows you know the country, not the guidebook.", ko:"유명한 곳 하나와 현지인이 실제로 가는 곳 하나. 그 대비가 가이드북이 아니라 나라를 안다는 걸 보여줍니다"},
     {en:"Give a reason tied to an experience, not a description: “go at night, because…”", ko:"설명이 아니라 경험에 묶인 이유를 주세요. “밤에 가세요, 왜냐하면 ~”"},
     {en:"Keep it to two or three places so others still have room to speak.", ko:"두세 곳만 말하세요. 다른 사람 발언 시간을 남겨두는 것도 평가됩니다"}
   ]},
@@ -1245,7 +1363,7 @@ const DISC = [
 { id:"d17", type:"open",
   q:"Can you recommend some delicious street food in Korea?", ko:"한국 길거리 음식 추천",
   angles:[
-    {en:"Describe the texture and the moment, not just the name — assessors remember “hot, chewy, eaten standing in winter.”", ko:"이름만 말하지 말고 식감과 순간을 묘사하세요. “뜨겁고 쫄깃하고, 겨울에 서서 먹는”이 기억에 남습니다"},
+    {en:"Describe the texture and the moment, not just the name, assessors remember “hot, chewy, eaten standing in winter.”", ko:"이름만 말하지 말고 식감과 순간을 묘사하세요. “뜨겁고 쫄깃하고, 겨울에 서서 먹는”이 기억에 남습니다"},
     {en:"Mention one that is easy for a first-timer and one that is a little adventurous.", ko:"처음 온 사람에게 쉬운 것 하나, 조금 도전적인 것 하나"},
     {en:"A one-line personal memory beats a full explanation.", ko:"긴 설명보다 개인적인 기억 한 줄이 낫습니다"}
   ]},
@@ -1253,8 +1371,8 @@ const DISC = [
 { id:"d18", type:"open",
   q:"Talk about the good and bad sides of Korean culture.", ko:"한국 문화의 좋은 점과 나쁜 점",
   angles:[
-    {en:"Good — the speed and the sense that people will show up for each other in a crisis.", ko:"좋은 점 — 빠른 실행력과, 위기에 서로 나서주는 분위기"},
-    {en:"Hard — the same intensity turns into comparison, and people measure themselves constantly.", ko:"어려운 점 — 같은 강도가 비교로 바뀌어서, 사람들이 끊임없이 자신을 재게 됩니다"},
+    {en:"Good, the speed and the sense that people will show up for each other in a crisis.", ko:"좋은 점, 빠른 실행력과, 위기에 서로 나서주는 분위기"},
+    {en:"Hard, the same intensity turns into comparison, and people measure themselves constantly.", ko:"어려운 점, 같은 강도가 비교로 바뀌어서, 사람들이 끊임없이 자신을 재게 됩니다"},
     {en:"Close with balance: “I think the strength and the difficulty come from the same place.”", ko:"균형으로 닫으세요. “장점과 단점이 같은 데서 나온다고 생각합니다”"}
   ],
   tip:"자국 문화를 깎아내리지도, 무조건 미화하지도 마세요. 둘 다 감점입니다. 객관적으로 보는 사람이라는 인상이 목표입니다."},
@@ -1262,15 +1380,15 @@ const DISC = [
 { id:"d19", type:"open",
   q:"If you could only eat one food until you die, what would it be?", ko:"죽을 때까지 한 가지 음식만 먹어야 한다면",
   angles:[
-    {en:"Pick something with a story attached — who made it, when you ate it.", ko:"이야기가 붙은 걸 고르세요. 누가 만들었고 언제 먹었는지"},
+    {en:"Pick something with a story attached, who made it, when you ate it.", ko:"이야기가 붙은 걸 고르세요. 누가 만들었고 언제 먹었는지"},
     {en:"A light, confident answer is better than an agonised one. This is an icebreaker.", ko:"고민하는 것보다 가볍고 자신 있는 답이 낫습니다. 아이스브레이킹용 질문이에요"},
-    {en:"Listen to what others picked and react — that's what's actually being scored here.", ko:"남이 고른 걸 듣고 반응하세요. 여기서 실제로 점수가 되는 건 그겁니다"}
+    {en:"Listen to what others picked and react, that's what's actually being scored here.", ko:"남이 고른 걸 듣고 반응하세요. 여기서 실제로 점수가 되는 건 그겁니다"}
   ]},
 
 { id:"d20", type:"open",
   q:"What is your favourite colour?", ko:"가장 좋아하는 색",
   angles:[
-    {en:"Answer in one sentence, then give one reason — don't over-explain a light question.", ko:"한 문장으로 답하고 이유 하나. 가벼운 질문을 길게 설명하지 마세요"},
+    {en:"Answer in one sentence, then give one reason, don't over-explain a light question.", ko:"한 문장으로 답하고 이유 하나. 가벼운 질문을 길게 설명하지 마세요"},
     {en:"A reason tied to a place or a memory sounds natural; a reason tied to personality sounds rehearsed.", ko:"장소나 기억에 묶인 이유는 자연스럽고, 성격에 묶인 이유는 외운 티가 납니다"},
     {en:"Then turn it outward: “What about you?”", ko:"그리고 밖으로 넘기세요. “어떠세요?”"}
   ]},
@@ -1278,7 +1396,7 @@ const DISC = [
 { id:"d21", type:"open",
   q:"Share with us your favourite dessert.", ko:"가장 좋아하는 디저트",
   angles:[
-    {en:"Sensory detail does the work — temperature, texture, where you eat it.", ko:"감각 묘사가 일을 합니다. 온도, 식감, 어디서 먹는지"},
+    {en:"Sensory detail does the work, temperature, texture, where you eat it.", ko:"감각 묘사가 일을 합니다. 온도, 식감, 어디서 먹는지"},
     {en:"A Korean dessert gives you something to explain to a mixed group, which creates conversation.", ko:"한국 디저트를 고르면 다국적 그룹에 설명할 거리가 생겨서 대화가 만들어집니다"},
     {en:"Twenty seconds is plenty. Then hand the turn to someone quiet.", ko:"20초면 충분합니다. 그다음 조용한 사람에게 차례를 넘기세요"}
   ]}
@@ -1318,7 +1436,6 @@ function qCard(item, idx) {
   var phr = item.phrases.map(function(p){
     return '<li><div class="ph-en">' + esc(p.en) + '</div><div class="ph-ko">' + esc(p.ko) + '</div></li>';
   }).join("");
-  var mw = words(item.model);
 
   el.innerHTML =
     '<div class="q-head">' +
@@ -1334,24 +1451,12 @@ function qCard(item, idx) {
         '<div class="memo"><textarea placeholder="영어로 직접 써보세요. 한국어로 먼저 정리한 뒤 영어로 옮겨도 좋습니다."></textarea>' +
         '<div class="memo-bar"><span class="time">0단어 · 약 0초</span><span class="saved">저장됨</span></div></div>' +
       '</div>' +
-      '<div class="blk"><div class="blk-t">💡 모범 답변 예시</div>' +
-        '<div class="model hidden"><div class="model-txt">' + esc(item.model) + '</div>' +
-        '<div class="model-reveal"><button type="button">답변 보기</button>' +
-        '<span>먼저 직접 써보는 게 훨씬 도움이 됩니다</span></div></div>' +
-        '<div class="wc">' + mw + '단어 · 약 ' + secs(mw) + '초 분량</div>' +
-      '</div>' +
       '<div class="blk"><div class="blk-t">🔤 핵심 표현</div><ul class="ph">' + phr + '</ul></div>' +
       '<div class="tip"><span class="tip-label">♡</span>' + esc(item.tip) + '</div>' +
     '</div>';
 
   var head = el.querySelector(".q-head");
   head.addEventListener("click", function(){ el.classList.toggle("open"); });
-
-  var model = el.querySelector(".model");
-  el.querySelector(".model-reveal button").addEventListener("click", function(e){
-    e.stopPropagation();
-    model.classList.remove("hidden");
-  });
 
   var ta = el.querySelector("textarea");
   var bar = el.querySelector(".memo-bar .time");
@@ -1395,8 +1500,23 @@ var SHEET_URL = "";
   var wrap = document.getElementById("my-q");
   if (!wrap) return;
 
-  var AIR = ["에미레이트","카타르항공","에티하드","싱가포르항공","리야드에어","대한항공","아시아나","진에어","기타"];
+  var AIR = ["에미레이트","카타르항공","에티하드","싱가포르항공","리야드에어","대한항공","아시아나","진에어","직접 입력"];
   var KEY = "cj_myq";
+
+  var KINDS = [
+    { label:"받은 질문", tag:"",
+      ph:"면접에서 받으신 질문을 적어주세요 (영어 또는 한국어)",
+      note:"적어주신 질문은 아래에 저장돼서 바로 연습하실 수 있고, 다른 분들 자료에도 반영될 수 있어요. 작성하신 <b>답변은 이 기기에만</b> 남고 전송되지 않습니다.<br>이름이나 본인을 특정할 수 있는 내용은 빼고 적어주세요.",
+      ok:"추가됐어요. 아래에서 바로 연습해보세요." },
+    { label:"디스커션 주제", tag:"[디스커션] ",
+      ph:"예: Money can buy happiness",
+      note:"그룹 디스커션에서 나온 주제를 적어주세요. 지금 확인된 건 싱가포르 3건뿐이라, <b>카타르·에미레이트·에티하드는 주제가 하나도 없습니다.</b> 주제를 아시는 분이 적어주셔야 채워지는 칸입니다.<br>날짜나 조 구성은 안 적어도 됩니다. 주제만요.",
+      ok:"고맙습니다. 자료에 반영하겠습니다." },
+    { label:"전형이 달랐던 점", tag:"[전형] ",
+      ph:"예: AI 영상면접 없이 바로 대면이었어요",
+      note:"자료에 적힌 전형과 실제가 달랐던 부분을 적어주세요. 틀린 걸 알려주시는 게 가장 도움이 됩니다. 회차마다 바뀌는데 공고에는 안 적히는 게 많아서, 이게 가장 받기 어려운 정보입니다.<br>이름이나 본인을 특정할 수 있는 내용은 빼고 적어주세요.",
+      ok:"고맙습니다. 확인하고 자료를 고치겠습니다." }
+  ];
 
   function load(){
     try { return JSON.parse(LS.get(KEY) || "[]"); } catch(e){ return []; }
@@ -1405,23 +1525,53 @@ var SHEET_URL = "";
 
   wrap.innerHTML =
     '<div class="myq-box">' +
-      '<h3>내가 받은 질문 추가하기</h3>' +
-      '<div class="myq-sub">면접에서 실제로 받으셨거나 들으신 질문을 적어두시면, 위 질문들과 똑같이 답변을 써보며 연습하실 수 있어요.</div>' +
-      '<div class="myq-row">' +
+      '<h3>면접 보고 오셨다면 써주세요🫶</h3>' +
+      '<div class="myq-sub">이 자료는 후기로 채워집니다. 싱가포르 디스커션 주제 중 실제 출제가 확인된 세 건도 후기로 받은 것이에요. 적어주신 내용은 다음 분들이 보는 자료에 반영됩니다. 로그인은 필요 없습니다.</div>' +
+      '<div class="myq-row myq-row2">' +
         '<select id="myq-air">' + AIR.map(function(a){ return '<option>' + esc(a) + '</option>'; }).join("") + '</select>' +
-        '<input id="myq-txt" type="text" placeholder="질문을 적어주세요 (영어 또는 한국어)" maxlength="200">' +
+        '<select id="myq-kind">' + KINDS.map(function(k,i){ return '<option value="' + i + '">' + esc(k.label) + '</option>'; }).join("") + '</select>' +
+        '<input id="myq-txt" type="text" placeholder="' + esc(KINDS[0].ph) + '" maxlength="200">' +
+        '<input id="myq-air-etc" type="text" placeholder="항공사 이름을 적어주세요" maxlength="30" hidden>' +
       '</div>' +
-      '<button type="button" class="myq-add" id="myq-add" disabled>추가하기</button>' +
-      '<div class="myq-note">추가하신 질문은 저장돼서 다른 분들 자료에도 반영될 수 있어요. 작성하신 <b>답변은 이 기기에만</b> 남고 전송되지 않습니다.<br>이름이나 특정할 수 있는 내용은 빼고 질문만 적어주세요.</div>' +
-      '<div class="myq-msg" id="myq-msg">추가됐어요. 아래에서 바로 연습해보세요.</div>' +
+      '<button type="button" class="myq-add" id="myq-add" disabled>보내기</button>' +
+      '<div class="myq-note" id="myq-note"></div>' +
+      '<div class="myq-msg" id="myq-msg"></div>' +
     '</div>' +
     '<div id="myq-list"></div>';
 
-  var selAir = document.getElementById("myq-air");
-  var inp    = document.getElementById("myq-txt");
-  var btn    = document.getElementById("myq-add");
-  var msg    = document.getElementById("myq-msg");
-  var list   = document.getElementById("myq-list");
+  var selAir  = document.getElementById("myq-air");
+  var selKind = document.getElementById("myq-kind");
+  var inp     = document.getElementById("myq-txt");
+  var btn     = document.getElementById("myq-add");
+  var msg     = document.getElementById("myq-msg");
+  var note    = document.getElementById("myq-note");
+  var list    = document.getElementById("myq-list");
+
+  var inpAir = document.getElementById("myq-air-etc");
+
+  function airVal(){
+    if (selAir.value !== "직접 입력") return selAir.value;
+    var v = inpAir.value.trim();
+    return v || "직접 입력(미기재)";
+  }
+  function syncAir(){
+    var etc = (selAir.value === "직접 입력");
+    inpAir.hidden = !etc;
+    if (etc) inpAir.focus();
+    else inpAir.value = "";
+  }
+  selAir.addEventListener("change", syncAir);
+  syncAir();
+
+  function kind(){ return KINDS[Number(selKind.value) || 0] || KINDS[0]; }
+  function syncKind(){
+    var k = kind();
+    inp.placeholder = k.ph;
+    note.innerHTML  = k.note;
+    msg.classList.remove("on");
+  }
+  selKind.addEventListener("change", syncKind);
+  syncKind();
 
   inp.addEventListener("input", function(){
     btn.disabled = inp.value.trim().length < 5;
@@ -1437,7 +1587,7 @@ var SHEET_URL = "";
         method:"POST",
         mode:"no-cors",
         headers:{ "Content-Type":"text/plain;charset=utf-8" },
-        body: JSON.stringify({ airline:rec.airline, question:rec.q, ts:rec.ts })
+        body: JSON.stringify({ airline:rec.airline, question:(rec.tag || "") + rec.q, ts:rec.ts })
       }).catch(function(){});
     } catch(e){}
   }
@@ -1508,16 +1658,21 @@ var SHEET_URL = "";
   function add(){
     var q = inp.value.trim();
     if (q.length < 5) return;
-    var rec = { id: String(Date.now()), airline: selAir.value, q: q, ts: new Date().toISOString() };
-    var items = load();
-    items.unshift(rec);
-    save(items);
+    var k = kind();
+    var rec = { id: String(Date.now()), airline: airVal(), q: q,
+                tag: k.tag, ts: new Date().toISOString() };
     send(rec);
+    if (!k.tag) {            /* 받은 질문만 기기에 저장해서 연습 목록에 올립니다 */
+      var items = load();
+      items.unshift(rec);
+      save(items);
+      draw();
+    }
     inp.value = "";
     btn.disabled = true;
+    msg.textContent = k.ok;
     msg.classList.add("on");
-    setTimeout(function(){ msg.classList.remove("on"); }, 2600);
-    draw();
+    setTimeout(function(){ msg.classList.remove("on"); }, 3200);
   }
 
   btn.addEventListener("click", add);
@@ -1576,7 +1731,7 @@ var cases = DISC_META.confirmed.map(function(c){
 }).join("");
 discTop.insertAdjacentHTML("beforeend",
   '<article class="cbox"><h3>실제로 나온 주제 (2026년 서울)</h3>' +
-  '<div class="cbox-sub">방에 직접 남겨주신 후기 기준입니다. 4/25와 4/26은 같은 회차 연속 이틀인데 주제가 달랐어요 — 주제는 세션마다 바뀝니다.</div>' +
+  '<div class="cbox-sub">방에 직접 남겨주신 후기 기준입니다. 4/25와 4/26은 같은 회차 연속 이틀인데 주제가 달랐어요, 주제는 세션마다 바뀝니다.</div>' +
   cases + '</article>');
 
 discTop.insertAdjacentHTML("beforeend",
@@ -1596,6 +1751,50 @@ discTop.insertAdjacentHTML("beforeend",
         return '<li><div class="ph-en">' + esc(p.en) + '</div><div class="ph-ko">' + esc(p.ko) + '</div></li>';
       }).join("") + '</ul></div>';
   }).join("") + '</article>');
+
+/* ── 유형 2 렌더 ── */
+var discTask = document.getElementById("disc-task");
+if (discTask) {
+  discTask.insertAdjacentHTML("beforeend",
+    '<article class="cbox"><h3>찬반형과 무엇이 다른가</h3>' +
+    '<div class="cbox-sub">준비 방법이 아예 다릅니다. 이걸 모르고 찬반형처럼 준비하면 그 자리에서 드러납니다.</div>' +
+    TASK.diff.map(function(m){
+      return '<div class="mrule"><div class="mrule-t">' + esc(m.t) + '</div>' +
+        '<div class="mrule-d">' + m.d + '</div></div>';
+    }).join("") + '</article>');
+
+  discTask.insertAdjacentHTML("beforeend",
+    '<article class="cbox"><h3>판단 기준 네 단계</h3>' +
+    '<div class="cbox-sub">이 순서만 외워 가면 처음 보는 과제에도 쓸 수 있습니다. 제가 기내 업무 순서를 보고 정리한 것이고, 항공사가 공개한 평가 기준은 아닙니다.</div>' +
+    TASK.prio.map(function(m,i){
+      return '<div class="prio"><div class="prio-n">' + (i+1) + '</div>' +
+        '<div><div class="prio-t">' + esc(m.t) + '</div>' +
+        '<div class="prio-d">' + esc(m.d) + '</div>' +
+        '<div class="prio-en">' + esc(m.en) + '</div></div></div>';
+    }).join("") + '</article>');
+
+  discTask.insertAdjacentHTML("beforeend",
+    '<article class="cbox"><h3>확인된 과제</h3>' +
+    '<div class="cbox-sub">방에 남겨주신 후기 기준입니다. 날짜가 확인된 건은 없습니다.</div>' +
+    TASK.seen.map(function(m){
+      return '<div class="case"><div class="case-d">' + esc(m.air) + '</div>' +
+        '<div><div class="case-t">' + esc(m.t) + '</div></div></div>';
+    }).join("") +
+    '<div class="gap">유형 1은 실제 출제가 확인된 주제가 세 건 있는데, <b>유형 2는 날짜까지 확인된 주제가 한 건도 없습니다.</b> ' +
+    '카타르·에미레이트·에티하드 디스커션을 보고 오신 분이 주제를 적어주시면 다음 분들이 이 칸을 보게 됩니다. ' +
+    '공통 질문 탭 아래 입력창에서 종류를 <b>디스커션 주제</b>로 고르시면 됩니다.</div>' +
+    '</article>');
+
+  discTask.insertAdjacentHTML("beforeend",
+    '<article class="cbox"><h3>과제형 영어 표현</h3>' +
+    '<div class="cbox-sub">찬반형 표현과 다릅니다. 내 의견을 세우는 말보다 조를 결론으로 끌고 가는 말이 점수가 됩니다.</div>' +
+    TASK.ph.map(function(g){
+      return '<div class="pgrp"><div class="pgrp-t">' + esc(g.group) + '</div><ul class="ph">' +
+        g.items.map(function(x){
+          return '<li><div class="ph-en">' + esc(x.en) + '</div><div class="ph-ko">' + esc(x.ko) + '</div></li>';
+        }).join("") + '</ul></div>';
+    }).join("") + '</article>');
+}
 
 function sideList(items) {
   return '<ul>' + items.map(function(p){
@@ -1649,7 +1848,7 @@ SJT.forEach(function(s, i){
     '<div class="blk-t">문제 ' + (i+1) + '</div>' +
     '<div class="scene">' + esc(s.scene) + '</div>' +
     '<div class="opts">' + opts + '</div>' +
-    '<div class="rule"><span class="tip-label">♡</span>판단 우선순위 — <b>승객 안전 &gt; 승객의 존엄 &gt; 서비스 회복 &gt; 승무원 편의</b>. 보기 중 둘 이상이 그럴듯할 때 이 순서로 고르면 거의 맞습니다.</div>';
+    '<div class="rule"><span class="tip-label">♡</span>판단 우선순위, <b>승객 안전 &gt; 승객의 존엄 &gt; 서비스 회복 &gt; 승무원 편의</b>. 보기 중 둘 이상이 그럴듯할 때 이 순서로 고르면 거의 맞습니다.</div>';
 
   el.querySelector(".opts").addEventListener("click", function(e){
     var b = e.target.closest(".opt");
@@ -1688,7 +1887,7 @@ box("STAR 연결 표현",
 );
 
 box("막혔을 때 쓰는 표현",
-  "침묵보다 낫습니다. 다만 한 번만 쓰세요 — 매 질문마다 쓰면 준비가 안 된 것처럼 들립니다.",
+  "침묵보다 낫습니다. 다만 한 번만 쓰세요, 매 질문마다 쓰면 준비가 안 된 것처럼 들립니다.",
   '<ul class="ph">' + PHRASES.fillers.map(function(p){
     return '<li><div class="ph-en">' + esc(p.en) + '</div><div class="ph-ko">' + esc(p.ko) + '</div></li>';
   }).join("") + "</ul>"
@@ -1712,8 +1911,8 @@ box("기내 서비스 표현",
   }).join("") + "</ul>"
 );
 
-box("쿠션어 — 부드럽게 말하는 법",
-  "승무원이 하루에 가장 많이 쓰는 표현입니다. 핵심은 <b>거절한 뒤에 대안을 붙이는 것</b>이에요. 거절만 하면 거절이고, 대안이 붙으면 서비스가 됩니다. 면접에서도 그대로 쓰입니다 — 어려운 질문을 받았을 때, 그룹 활동에서 반대 의견을 낼 때요.",
+box("쿠션어, 부드럽게 말하는 법",
+  "승무원이 하루에 가장 많이 쓰는 표현입니다. 핵심은 <b>거절한 뒤에 대안을 붙이는 것</b>이에요. 거절만 하면 거절이고, 대안이 붙으면 서비스가 됩니다. 면접에서도 그대로 쓰입니다, 어려운 질문을 받았을 때, 그룹 활동에서 반대 의견을 낼 때요.",
   PHRASES.cushion.map(function(g){
     return '<div class="pgrp"><div class="pgrp-t">' + esc(g.label) + '</div><ul class="ph">' +
       g.items.map(function(p){
@@ -1764,6 +1963,18 @@ tabs.forEach(function(t){
     if (e.key === "ArrowLeft")  { tabs[(i-1+tabs.length) % tabs.length].focus(); tabs[(i-1+tabs.length) % tabs.length].click(); }
   });
 });
+
+/* 예시 분량 자동 계산 */
+(function(){
+  var box = document.getElementById("ex-len");
+  if (!box) return;
+  var n = 0;
+  Array.prototype.forEach.call(document.querySelectorAll(".ex-step .ex-en"), function(e){
+    n += words(e.textContent);
+  });
+  box.innerHTML = "전부 합쳐서 <b>" + n + "단어 · 약 " + secs(n) +
+    "초</b>입니다. 1분 안팎이에요. 이 정도면 충분합니다.";
+})();
 
 var h = (location.hash || "").replace("#","");
 show(PANELS[h] ? h : "core");
