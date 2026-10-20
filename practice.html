@@ -1494,7 +1494,7 @@ CORE.forEach(function(item, i){ coreList.appendChild(qCard(item, i)); });
 /* ── 내 질문 추가 ──
    시트로 보내려면 아래 SHEET_URL 에 Apps Script 웹앱 주소를 넣으세요.
    비워두면 전송 없이 이 기기에만 저장됩니다. */
-var SHEET_URL = "";
+var SHEET_URL = "https://script.google.com/macros/s/AKfycbyPFQgtUCDaau1JV6Crty7dC_VDcEhUpul13C-Kpm_wmRvUcJsiTRUxH2PqBGIm98yAPg/exec";
 
 (function(){
   var wrap = document.getElementById("my-q");
@@ -1525,7 +1525,7 @@ var SHEET_URL = "";
 
   wrap.innerHTML =
     '<div class="myq-box">' +
-      '<h3>면접 보고 오셨다면 써주세요🫶</h3>' +
+      '<h3>면접 보고 오셨다면 써주세요</h3>' +
       '<div class="myq-sub">이 자료는 후기로 채워집니다. 싱가포르 디스커션 주제 중 실제 출제가 확인된 세 건도 후기로 받은 것이에요. 적어주신 내용은 다음 분들이 보는 자료에 반영됩니다. 로그인은 필요 없습니다.</div>' +
       '<div class="myq-row myq-row2">' +
         '<select id="myq-air">' + AIR.map(function(a){ return '<option>' + esc(a) + '</option>'; }).join("") + '</select>' +
