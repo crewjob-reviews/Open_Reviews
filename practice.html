@@ -451,7 +451,7 @@ table.avoid tr:last-child td { border-bottom:0; }
       </div>
       <div class="mrule">
         <div class="mrule-t">온라인 전형도 같습니다</div>
-        <div class="mrule-d">녹화형 영상면접은 답변이 끝난 뒤에도 몇 초가 더 녹화되는 경우가 있습니다. 그리고 그 영상을 최종적으로 사람이 봅니다. 마지막 문장을 마치고 한 박자 두었다가 정지하세요.</div>
+        <div class="mrule-d">녹화형 영상면접은 문항마다 시간이 정해져 있습니다. 일찍 끝내도 다음 버튼을 누르기 전까지는 계속 녹화돼요. 2분 중 50초에 말을 마쳤으면 남은 70초가 그대로 찍히는 겁니다. 그 시간에 풀린 표정이나 한숨이 담기고, 그 영상을 최종적으로 사람이 봅니다. 마지막 문장을 마치고 한 박자 둔 다음 버튼을 누르세요. 버튼이 없고 시간이 다 차야 넘어가는 전형도 있으니, 끝났다고 자세를 풀지 마세요.</div>
       </div>
     </article>
   </section>
@@ -1389,7 +1389,7 @@ CORE.forEach(function(item, i){ coreList.appendChild(qCard(item, i)); });
 /* ── 내 질문 추가 ──
    시트로 보내려면 아래 SHEET_URL 에 Apps Script 웹앱 주소를 넣으세요.
    비워두면 전송 없이 이 기기에만 저장됩니다. */
-var SHEET_URL = "https://script.google.com/macros/s/AKfycbyPFQgtUCDaau1JV6Crty7dC_VDcEhUpul13C-Kpm_wmRvUcJsiTRUxH2PqBGIm98yAPg/exec";
+var SHEET_URL = "";
 
 (function(){
   var wrap = document.getElementById("my-q");
