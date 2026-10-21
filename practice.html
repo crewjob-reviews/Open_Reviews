@@ -205,6 +205,8 @@ ol.frame li::marker { color:var(--brand); font-weight:700; }
   background:var(--brand); border:0; border-radius:12px; padding:12px; cursor:pointer; }
 .myq-add:disabled { background:#b9c9d8; cursor:default; }
 .myq-note { font-size:0.8rem; color:var(--muted); line-height:1.65; margin-top:10px; }
+.myq-fixed { font-size:0.78rem; color:var(--muted); line-height:1.6; margin-top:9px;
+  padding-top:9px; border-top:1px dashed var(--line); }
 .myq-msg { font-size:0.84rem; color:var(--brand-deep); margin-top:10px; display:none; }
 .myq-msg.on { display:block; }
 .myq-del { background:none; border:0; color:#9aadbf; font-size:0.82rem; cursor:pointer; padding:4px 0; }
@@ -1494,7 +1496,7 @@ CORE.forEach(function(item, i){ coreList.appendChild(qCard(item, i)); });
 /* ── 내 질문 추가 ──
    시트로 보내려면 아래 SHEET_URL 에 Apps Script 웹앱 주소를 넣으세요.
    비워두면 전송 없이 이 기기에만 저장됩니다. */
-var SHEET_URL = "https://script.google.com/macros/s/AKfycbyPFQgtUCDaau1JV6Crty7dC_VDcEhUpul13C-Kpm_wmRvUcJsiTRUxH2PqBGIm98yAPg/exec";
+var SHEET_URL = "";
 
 (function(){
   var wrap = document.getElementById("my-q");
@@ -1506,15 +1508,15 @@ var SHEET_URL = "https://script.google.com/macros/s/AKfycbyPFQgtUCDaau1JV6Crty7d
   var KINDS = [
     { label:"받은 질문", tag:"",
       ph:"면접에서 받으신 질문을 적어주세요 (영어 또는 한국어)",
-      note:"적어주신 질문은 아래에 저장돼서 바로 연습하실 수 있고, 다른 분들 자료에도 반영될 수 있어요. 작성하신 <b>답변은 이 기기에만</b> 남고 전송되지 않습니다.<br>이름이나 본인을 특정할 수 있는 내용은 빼고 적어주세요.",
+      note:"면접에서 실제로 받으셨거나 들으신 질문을 적어주세요. 적어두시면 아래에서 바로 답변 연습을 하실 수 있어요.",
       ok:"추가됐어요. 아래에서 바로 연습해보세요." },
     { label:"디스커션 주제", tag:"[디스커션] ",
       ph:"예: Money can buy happiness",
-      note:"그룹 디스커션에서 나온 주제를 적어주세요. 지금 확인된 건 싱가포르 3건뿐이라, <b>카타르·에미레이트·에티하드는 주제가 하나도 없습니다.</b> 주제를 아시는 분이 적어주셔야 채워지는 칸입니다.<br>날짜나 조 구성은 안 적어도 됩니다. 주제만요.",
+      note:"그룹 디스커션에서 나온 주제를 적어주세요. 지금 확인된 건 싱가포르 3건뿐이라, <b>카타르·에미레이트·에티하드는 주제가 하나도 없습니다.</b> 주제를 아시는 분이 적어주셔야 채워지는 칸입니다. 날짜나 조 구성은 안 적으셔도 되고 주제만 주시면 됩니다.",
       ok:"고맙습니다. 자료에 반영하겠습니다." },
     { label:"전형이 달랐던 점", tag:"[전형] ",
       ph:"예: AI 영상면접 없이 바로 대면이었어요",
-      note:"자료에 적힌 전형과 실제가 달랐던 부분을 적어주세요. 틀린 걸 알려주시는 게 가장 도움이 됩니다. 회차마다 바뀌는데 공고에는 안 적히는 게 많아서, 이게 가장 받기 어려운 정보입니다.<br>이름이나 본인을 특정할 수 있는 내용은 빼고 적어주세요.",
+      note:"자료에 적힌 전형과 실제가 달랐던 부분을 적어주세요. 틀린 걸 알려주시는 게 가장 도움이 됩니다. 회차마다 바뀌는데 공고에는 안 적히는 게 많아서, 이게 가장 받기 어려운 정보입니다.",
       ok:"고맙습니다. 확인하고 자료를 고치겠습니다." }
   ];
 
@@ -1535,6 +1537,7 @@ var SHEET_URL = "https://script.google.com/macros/s/AKfycbyPFQgtUCDaau1JV6Crty7d
       '</div>' +
       '<button type="button" class="myq-add" id="myq-add" disabled>보내기</button>' +
       '<div class="myq-note" id="myq-note"></div>' +
+      '<div class="myq-fixed">적어주신 내용은 저에게 전달됩니다. 작성하신 <b>답변은 이 기기에만</b> 남고 전송되지 않아요.<br>이름이나 본인을 특정할 수 있는 내용은 빼고 적어주세요.</div>' +
       '<div class="myq-msg" id="myq-msg"></div>' +
     '</div>' +
     '<div id="myq-list"></div>';
