@@ -115,6 +115,9 @@ h1 { color:#24476a; letter-spacing:.01em; }
 .cta-divider { color:#c5d9ea; }
 .cta-divider::before, .cta-divider::after { background:var(--line); }
 .watermark { color:rgba(46,90,130,.3); }
+.store-row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+.store-row .cta-btn { margin-bottom:0; }
+@media (max-width:420px) { .store-row { flex-direction:column; } }
 .ed-tabs { background:linear-gradient(180deg,rgba(243,247,251,.96),rgba(243,247,251,.96)); }
 .ed-tab { color:var(--muted); box-shadow:0 2px 8px rgba(46,90,130,.08); }
 .ed-tab .ed-meta { color:#98abbd; }
@@ -142,20 +145,22 @@ h1 { color:#24476a; letter-spacing:.01em; }
 
   <div class="intro">
     여기 있는 후기는 전부 실제 지원자분들이 직접 작성한 후기입니다 🩷<br>
-    합격도 불합격도, 아직 기다리시는 분들도 여러분의 이야기가 다음 사람에게 큰 힘이 됩니다 🌷
+    합격도 불합격도, 아직 기다리시는 분들도 여러분의 이야기가 다음 사람에게 큰 힘이 됩니다 🌷<br>
+    <br>
+    이 페이지에는 <b>1~3탄</b>이 모여 있어요. <b>4탄부터는 크루잡 앱</b>에 올라갑니다.
   </div>
 
   <div class="unlock-banner">
     <strong>🔓 전체 51건 열람 방법</strong><br>
-    아래 두 가지 중 <b>하나만</b> 작성하면 전체 후기를 볼 수 있어요!
+    맨 아래 <b>내 준비 현황 공유하기</b>를 작성하시면 전체 후기가 열려요. 1분이면 충분합니다.
     <div class="unlock-methods">
       <div class="unlock-method">
-        <span class="icon">📝</span>
-        <span class="desc"><span class="label">면접 후기 남기기</span><br><span class="detail">면접 다녀오셨다면 — 경험을 공유해주세요</span></span>
+        <span class="icon">👋</span>
+        <span class="desc"><span class="label">내 준비 현황 공유하기</span><br><span class="detail">준비 중인 항공사와 단계만 알려주시면 돼요</span></span>
       </div>
       <div class="unlock-method">
-        <span class="icon">👋</span>
-        <span class="desc"><span class="label">내 준비 현황 공유하기</span><br><span class="detail">아직 면접 전이라면 — 1분이면 충분해요</span></span>
+        <span class="icon">✈️</span>
+        <span class="desc"><span class="label">면접 보고 오셨다면</span><br><span class="detail">후기는 이제 크루잡 앱에서 받고 있어요</span></span>
       </div>
     </div>
   </div>
@@ -192,7 +197,7 @@ h1 { color:#24476a; letter-spacing:.01em; }
 <div class="timeline"><b>타임라인</b> 서류 접수(6/1~6/11) → 서류 발표(6/24) → 영상면접(6/24~6/29) → 영상 발표(7/9) → 임원면접(7/16) → 최종 발표(7/23)</div>
 <div class="story">임원면접 질문이 "왜 승무원이 되고 싶나요?"처럼 짧지 않고 서론이 굉장히 길었대요. "대한항공에 오기 위해 많은 노력을 했을 텐데 어떤 노력을 했고, 본인 성격이 승무원과 어떻게 맞아서 되고 싶은지"를 한 번에 물으셔서 순간 머릿속이 하얘졌고, 결국 준비해 간 지원동기로 답했다고 해요. <br/><br/>요즘 대한항공 면접은 준비한 답이라도 티 나지 않게, 그 자리에서 떠올린 것처럼 유연하게 답하는 걸 선호하는 것 같았대요.</div>
 </div>
-<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">맨 아래에서 폼 작성하면<br>볼 수 있어요</div></div>
 </div>
 </div>
 <div class="airline">
@@ -204,7 +209,7 @@ h1 { color:#24476a; letter-spacing:.01em; }
 <div class="story">1차 상황대처 면접은 면접관 3명, 지원자 6명 구성이었대요(당일 결시 1명이 있어 5명이 진행). 먼저 그룹 토의를 했는데, 물품이 급히 필요한 A부서가 "서류는 문제가 해결되는 대로 낼 테니 물건부터 달라"고 행정관리 B부서에 요청하는 상황을 어떻게 원만하게 풀지 지원자끼리 토의하고, 면접관은 지켜보는 방식이었어요. 토의가 끝나면 대표 1명이 발표했고요. <br/><br/>이어서 롤플레잉이 진행됐는데, 면접관이 상황을 주고 번호를 지정해 답하게 했대요. "조별 과제 발표 당일 중요한 역할을 맡은 조원이 무단 불참한다면?", "조원이 다른 조원의 험담을 나에게 한다면?" 같은 질문이었어요. 그 뒤로 이력서 기반 개인 질문이 있었고요. <br/><br/>마지막 질문은 "승무원이라는 직업을 한 단어로 표현한다면?"이었는데, "맥가이버"라고 답하며 승무원은 때로는 경찰, 때로는 베이비시터가 되고, 취객이 생기면 승객 안전을 책임지는 경호원이 되기도 해야 하기 때문이라고 설명했대요.</div>
 <div class="tip"><span class="heart-label">🩷 팁</span> 롤플레잉과 상황대처 면접이 메인인 것 같아요. 같이 준비한 분들 의견을 모아보면, 팀원 한 명이 방해하거나 갈등을 유도할 때 어떻게 조화롭게 해결하는지를 공통적으로 보는 것 같았습니다. 이 점을 유의하시면 도움이 될 거예요.</div>
 </div>
-<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">맨 아래에서 폼 작성하면<br>볼 수 있어요</div></div>
 </div>
 </div>
 <div class="airline">
@@ -215,7 +220,7 @@ h1 { color:#24476a; letter-spacing:.01em; }
 <div class="timeline"><b>타임라인</b> 지원(7/7~7/13) → 서류 발표(7/22) → 실무면접(7/28~7/31) → 실무 발표(8/5) → 컬처핏 면접(8/10~8/13) → 최종 발표(8/19)</div>
 <div class="story">실무면접은 시간이 촉박해서 다들 질문을 많이 받지 못했대요. 공통 질문은 "목표한 걸 이루지 못했을 때 나만의 대처법"이었고, 공대 출신 지원자에게는 "왜 승무원인지"를 따로 물으셨어요. 에어프레미아 승무원 지인이 있는 사람 손들어보라고 한 뒤, 손든 분께 "단점으로 들은 거 없냐"고 묻기도 하셨대요. <br/><br/>분위기가 좋아서 영어 질문 차례엔 "드디어 그 시간이 왔습니다~" 하며 장난스럽게 시작하셨고, 짝수 번호 선착순으로 "5년 전 나에게 해주고 싶은 말"을 물으셨대요. 영어 질문에 먼저 답하든 나중에 답하든 결과에는 크게 상관없어 보였다고 해요. 첫 면접이라 많이 긴장했지만 좋은 경험이었고, 헤어나 복장도 포니테일, 모나미 정장, 원피스까지 정말 다양했대요.</div>
 </div>
-<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">맨 아래에서 폼 작성하면<br>볼 수 있어요</div></div>
 </div>
 </div><div class="lock-more">외 8건의 잠긴 후기가 더 있어요<br/>맨 아래에서 한 번만 작성하면 전체가 열려요</div>
 
@@ -239,7 +244,7 @@ h1 { color:#24476a; letter-spacing:.01em; }
 <div class="story">먼저 BMI를 쟀는데 미달인 사람들은 전부 탈락이었다고 하니 참고하세요! 1차 면접은 베트남 면접관이 진행해서 억양을 알아듣기 어려웠고, 1차가 최종면접처럼 어려웠대요. 자기소개, 지원 이유, "왜 썬푸꾸옥인지", 베트남 역사를 아는지, 베트남어를 할 줄 아는지를 물으셨어요. 1차 합격은 축하(Congratulations) 종이, 탈락은 땡큐 종이를 받는 방식이었대요.</div>
 <div class="tip"><span class="heart-label">🩷 팁</span> 헤어 그루밍 중요해요! 화장도 베트남 스타일로 완벽하게 준비하세요.</div>
 </div>
-<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">맨 아래에서 폼 작성하면<br>볼 수 있어요</div></div>
 </div>
 
 
@@ -255,7 +260,7 @@ h1 { color:#24476a; letter-spacing:.01em; }
 <div class="story">대면면접은 참석하지 못했지만 하이어뷰 경험을 공유하면, 1시간 이상 걸렸대요. 해외 호텔에서 응시했는데 시종일관 밝은 느낌으로, 웃을 땐 더 활짝, 차분할 땐 차분하게 임했고 답변은 따로 외우지 않았다고 해요. 질문은 총 4개, 각 1분 내외로 진행됐어요 — 룰을 안 따르는 승객 응대, 서비스 불만 승객 응대, 새로운 도전을 했던 경험, 조직에서 사람들과 관계 맺는 방식.</div>
 <div class="tip"><span class="heart-label">🩷 팁</span> 타 항공사 AI 영상면접을 여러 번 본 지원자로서, 확실히 빛이 중요합니다... 스튜디오도 필요 없고 자연광이 최고예요!!! 제일 자연스럽고 예쁘게 나옵니다. 그리고 AI 영상면접이 얼마나 지치는지 정말 잘 아는데, 그 지친 기색을 절대 보여주면 안 돼요. "난 에너지 넘치고 지치지 않는 사람이다"를 영상에서 꼭 보여주세요. 중동은 특히 밝은 에너지, 자신감이 정말 중요한 합격 포인트라고 생각해요.</div>
 </div>
-<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">맨 아래에서 폼 작성하면<br>볼 수 있어요</div></div>
 </div>
 </div>
 <div class="airline">
@@ -266,7 +271,7 @@ h1 { color:#24476a; letter-spacing:.01em; }
 <div class="timeline"><b>타임라인</b> 오픈데이 하루에 자기소개 → 디스커션 → 영어테스트 → 파이널까지 진행</div>
 <div class="story">디스커션은 보딩 전에 6명의 승객에게 같은 시간에 리퀘스트를 받고 우선순위를 정하는 주제였고, 파이널에서는 베스트 서비스 경험, 동료를 도운 경험, 동료와의 갈등을 질문받으셨대요. 디스커션에서는 어떤 승객을 발표하든 자신감 있는 애티튜드와 모든 사람이 이해하기 쉬운 발표·대답 구성이 기본이 되어야 한다는 걸 느꼈다고 해요.</div>
 </div>
-<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">맨 아래에서 폼 작성하면<br>볼 수 있어요</div></div>
 </div>
 
 
@@ -335,7 +340,7 @@ h1 { color:#24476a; letter-spacing:.01em; }
 <div class="story">오픈데이 현장에서는 이름, 나이, 일 경험(최대 2개)을 묻는 정도로 간단하게 진행됐대요. 정식 인터뷰라기보다 가벼운 현장 스크리닝에 가까웠던 것 같아요. 화려한 스토리보다 담백한 자기소개가 관건이었을 수도 있겠어요.</div>
 <div class="tip"><span class="heart-label">🩷 팁</span> 저도 아직 승준생이지만 다 같이 힘내서 윙 달아요🫶✈️🤍</div>
 </div>
-<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">맨 아래에서 폼 작성하면<br>볼 수 있어요</div></div>
 </div>
 
 </div>
@@ -348,7 +353,7 @@ h1 { color:#24476a; letter-spacing:.01em; }
 <div class="story">공통 질문으로 "답답한 동료를 겪은 적이 있나요?"가 나왔고, 영어 질문으로는 "5년 전 나에게 하고 싶은 말은?"이 나왔대요. 특이했던 건, 면접관이 지원자 전체에게 "주변에 에어프레미아 다니는 분이 계신가요?"라고 물은 다음, 실제로 있다고 답한 분께 "그분이 어떤 말씀을 하시던가요?"까지 되물으셨다는 점이에요. 그리고 몇몇 분들껜 "오늘 들었던 답변 중 가장 기억에 남는 답변이 무엇이었는지"도 물으셨다고 해요.</div>
 <div class="tip"><span class="heart-label">🩷 팁</span> 첫 면접이었는데 생각보다 딱딱하지 않고 잘 웃어주셨어요! 저는 원피스를 입었는데, 대체로 면접복을 많이 입고 오시더라고요. 면접 하루 전에 반짝스터디 했었는데 꽤나 큰 도움이 됐습니다!! 추천드려요👍👍</div>
 </div>
-<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">맨 아래에서 폼 작성하면<br>볼 수 있어요</div></div>
 </div>
 </div>
 <div class="airline">
@@ -360,7 +365,7 @@ h1 { color:#24476a; letter-spacing:.01em; }
 <div class="story">단계가 정말 많았어요. 파이널에서 "다른 항공사와 비교했을 때 어떤 매력이 있는지" 질문엔 "why vietjet"으로 답하며 항공사를 칭찬하는 방향으로 답변했대요.</div>
 <div class="tip"><span class="heart-label">🩷 팁</span> 인바디는 무조건 맞춰가는 게 좋아요(눈바디가 중요!). 베트남 화장이 어울리면 베트남 스타일로, 본인이 하얀 편이면 대한항공처럼 화장하시는 걸 추천해요!</div>
 </div>
-<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">후기를 남기면 볼 수 있어요</div></div>
+<div class="lock-overlay"><div class="lock-icon">🔒</div><div class="lock-text">맨 아래에서 폼 작성하면<br>볼 수 있어요</div></div>
 </div>
 
 </div><div class="lock-more">외 13건의 잠긴 후기가 더 있어요<br/>맨 아래에서 한 번만 작성하면 전체가 열려요</div>
@@ -378,15 +383,17 @@ h1 { color:#24476a; letter-spacing:.01em; }
   <!-- ============ CTA ============ -->
   <div class="cta-section">
     <div class="cta-group">
-      <a class="cta-btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf3pOWSIJTaFmNbTwDzHfM6ks7v2zO6TdGD_Dsv1RO-85RPFA/viewform?usp=header">📝 면접 후기 남기기</a>
-      <div class="cta-sub">면접 다녀오셨나요?</div>
+      <a class="cta-btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfAiHD9-c0vf5SMuMc-YOpGlyi2Zr5htTMixgWmhZ5xdsa1ZA/viewform?usp=header">👋 내 준비 현황 공유하기</a>
+      <div class="cta-sub">1분이면 끝나고, 작성하시면 <b>전체 51건</b>이 열려요</div>
     </div>
-    <div class="cta-divider"><span>또는</span></div>
+    <div class="cta-divider"><span>면접 보고 오셨다면</span></div>
     <div class="cta-group">
-      <a class="cta-btn secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSfAiHD9-c0vf5SMuMc-YOpGlyi2Zr5htTMixgWmhZ5xdsa1ZA/viewform?usp=header">👋 내 준비 현황 공유하기</a>
-      <div class="cta-sub">아직 면접 전이라면?</div>
+      <div class="store-row">
+        <a class="cta-btn secondary store" data-os="ios" href="https://apps.apple.com/kr/app/id6811491987">🍎 App Store</a>
+        <a class="cta-btn secondary store" data-os="android" href="https://play.google.com/store/apps/details?id=app.crewjob.jobapp">▶️ Google Play</a>
+      </div>
+      <div class="cta-sub">후기는 이제 크루잡 앱에서 받고 있어요. 4탄부터는 앱에만 올라갑니다</div>
     </div>
-    <div class="cta-sub" style="margin-top: 18px;">둘 중 하나만 작성하면 <b>전체 51건</b> 모두 열람 가능!</div>
   </div>
 
   <div class="footer">
@@ -427,6 +434,22 @@ h1 { color:#24476a; letter-spacing:.01em; }
   });
   var h = (location.hash || '').replace('#','');
   if (document.getElementById(h) && /^ed\d+$/.test(h)) show(h, false);
+})();
+
+/* 보고 있는 기기에 맞는 스토어 버튼만 남깁니다. 못 가리면 둘 다 그대로 둡니다. */
+(function(){
+  try {
+    var ua = navigator.userAgent || '';
+    var ios = /iPad|iPhone|iPod/.test(ua) ||
+              (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    var android = /Android/.test(ua);
+    if (!ios && !android) return;
+    var drop = ios ? 'android' : 'ios';
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.store[data-os="' + drop + '"]'),
+      function(el){ el.style.display = 'none'; }
+    );
+  } catch(e) {}
 })();
 </script>
 </body>
